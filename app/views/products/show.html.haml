@@ -1,0 +1,171 @@
+= render 'layouts/products/breadcumb'
+%section.product_details_area.p_100
+  .container
+    .row.product_details_inner
+      .col-lg-8
+        .product_details_left
+          .price_title.d-flex.justify-content-between
+            .left
+              %h3 La Ferrari Coupe
+              .d-flex
+                .star-rating
+                %a.review_link{:href => "#review"} 324 reviews
+            .right
+              %h4 $16,000
+          .product_info
+            %a.popup-with-zoom-anim{:href => "#getinfoPopup"}
+              %i.icon-info1>
+              Request More Info
+            %a{:href => "compare-car-step-1.html"}
+              %i.icon-compare>
+              Add to Compare
+            %a.popup-with-zoom-anim{:href => "#bookPopup"}
+              %i.icon-steering>
+              Book a Test Drive
+            %a{:href => "#"}
+              %i.icon-share1>
+              Share this Car
+          .product_d_slider
+            .product_main_slider
+              .item
+                = image_tag("product/product-details-1.jpg")
+              .item
+                = image_tag("product/product-details-2.jpg")
+              .item
+                = image_tag("product/product-details-3.jpg")
+              .item
+                = image_tag("product/product-details-4.jpg")
+              .item
+                = image_tag("product/product-details-6.jpg")
+              .item
+                = image_tag("product/product-details-1.jpg")
+              .item
+                = image_tag("product/product-details-2.jpg")
+              .item
+                = image_tag("product/product-details-3.jpg")
+            .product_nav_slider
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-1.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-2.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-3.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-4.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-6.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-1.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-2.jpg")
+              .item
+                .img_inner
+                  = image_tag("product/product-tab-3.jpg")
+      .col-lg-4
+        .product_list_right
+          %a.main_btn.red.popup-with-zoom-anim{:href => "#offerPopup"} Make an Offer Price
+          %a.main_btn.red.popup-with-zoom-anim{:href => "#tradePopup"} Trade in Form
+          %ul.nav.flex-column
+            %li
+              %a{:href => "#"}
+                %i.icon-clock_2>
+                Date
+                %span 12 June 2019
+            %li
+              %a{:href => "#"}
+                %i.icon-gear1>
+                Transmission
+                %span Automatic
+            %li
+              %a{:href => "#"}
+                %i.icon-calendar-check-o>
+                Year
+                %span 2019
+            %li
+              %a{:href => "#"}
+                %i.icon-engine>
+                Engine Size
+                %span 3200 cc
+            %li
+              %a{:href => "#"}
+                %i.icon-car_3>
+                Body Type
+                %span Sedan
+            %li
+              %a{:href => "#"}
+                %i.icon-engine>
+                Engine Type
+                %span Petrol
+            %li
+              %a{:href => "#"}
+                %i.icon-assembly>
+                Assembly
+                %span Germany
+            %li
+              %a{:href => "#"}
+                %i.icon-seat>
+                Seat
+                %span 5
+            %li
+              %a{:href => "#"}
+                %i.icon-color_plate>
+                Color
+                %span.color
+            %li
+              %a{:href => "#"}
+                %i.icon-door>
+                Doors
+                %span 4
+    .product_overview_text
+      %h4 Overview
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them and eiusmod tempor incididunt labore dolorie magna aliqua. Ut enim adoren minim venim quis nostrud exercitation. Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      .row
+        .col-lg-6
+          %ul.nav.flex-column
+            %li
+              = image_tag("icon/green.png") 
+              Strong engine options, including a plug-in hybrid
+            %li
+              = image_tag("icon/green.png") 
+              Standard adaptive air suspension delivers a comfortable
+            %li
+              = image_tag("icon/green.png") 
+              Exceptional rear passenger space
+            %li
+              = image_tag("icon/green.png") 
+              Abundant standard equipment, including safety tech
+            %li
+              = image_tag("icon/green.png") 
+              No standard-length wheelbase model available
+            %li
+              = image_tag("icon/green.png") 
+              Not the driver-focused benchmark it once was
+        .col-lg-6
+          %ul.nav.flex-column
+            %li
+              = image_tag("icon/green.png") 
+              Strong engine options, including a plug-in hybrid
+            %li
+              = image_tag("icon/green.png") 
+              Standard adaptive air suspension delivers a comfortable
+            %li
+              = image_tag("icon/green.png") 
+              Exceptional rear passenger space
+            %li
+              = image_tag("icon/green.png") 
+              Abundant standard equipment, including safety tech
+            %li
+              = image_tag("icon/green.png") 
+              No standard-length wheelbase model available
+            %li
+              = image_tag("icon/green.png") 
+              Not the driver-focused benchmark it once was

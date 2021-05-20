@@ -1,0 +1,38 @@
+%section.client_feedback_area.p_100
+  .container
+    .flag_center_title
+      %h2.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+        = image_tag("icon/flag-2.png")
+        Clients Feedback
+    .client_slider.owl-carousel.owl-loaded.owl-drag
+      .owl-stage-outer
+        .owl-stage{:style => "transform: translate3d(-4560px, 0px, 0px); transition: all 1.5s ease 0s; width: 7980px;"}
+          .owl-item.active{:style => "width: 1110px; margin-right: 30px;"}
+            .item
+              .client_item
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them eiusmod tempor incididunt labore et dolorie magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo
+                %h4 Richar Branson 1
+                %h5 Vice Chairman of WBL Group
+          .owl-item{:style => "width: 1110px; margin-right: 30px;"}
+            .item
+              .client_item
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them eiusmod tempor incididunt labore et dolorie magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo
+                %h4 Richar Branson 2
+                %h5 Vice Chairman of WBL Group
+          .owl-item{:style => "width: 1110px; margin-right: 30px;"}
+            .item
+              .client_item
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them eiusmod tempor incididunt labore et dolorie magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo
+                %h4 Richar Branson 3
+                %h5 Vice Chairman of WBL Group
+          .owl-item{:style => "width: 1110px; margin-right: 30px;"}
+            .item
+              .client_item
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them eiusmod tempor incididunt labore et dolorie magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo
+                %h4 Richar Branson 4
+                %h5 Vice Chairman of WBL Group
+      .owl-nav.disabled
+        %button.owl-prev{:role => "presentation", :type => "button"}
+          %span{"aria-label" => "Previous"} ‹
+        %button.owl-next{:role => "presentation", :type => "button"}
+          %span{"aria-label" => "Next"} ›

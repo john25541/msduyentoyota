@@ -1,0 +1,52 @@
+%section.market_place_area.p_100
+  .container
+    .row.market_inner
+      .col-lg-6
+        .car_img
+          = image_tag("car-1.png", class: 'img-fluid')
+          %ul.nav
+            %li.wow.fadeInLeft.animated{"data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;"}
+              %h4 50+
+              %h5 Sold
+            %li.wow.fadeInDown.animated{"data-wow-delay" => "0.4s", :style => "visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"}
+              %h4 20+
+              %h5 kmph
+            %li.wow.fadeInRight.animated{"data-wow-delay" => "0.5s", :style => "visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;"}
+              %h4 10+
+              %h5 Awards
+      .col-lg-6
+        .market_text
+          %h3
+            = image_tag("icon/flag.png")
+            World largest
+            %span automotive
+            marketplace.
+          .row.maket_item_inner
+            .col-sm-6
+              .media
+                .d-flex
+                  %i.icon-car_2
+                .media-body
+                  %h4 Best Collection
+                  %p Lorem ipsum dolor sit amet consectetur adipisicing
+            .col-sm-6
+              .media
+                .d-flex
+                  %i.icon-pricing
+                .media-body
+                  %h4 Best Pricing
+                  %p Lorem ipsum dolor sit amet consectetur adipisicing
+            .col-sm-6
+              .media
+                .d-flex
+                  %i.icon-car_shield
+                .media-body
+                  %h4 Famous Brands
+                  %p Lorem ipsum dolor sit amet consectetur adipisicing
+            .col-sm-6
+              .media
+                .d-flex
+                  %i.icon-rating
+                .media-body
+                  %h4 Best Ratings
+                  %p Lorem ipsum dolor sit amet consectetur adipisicing

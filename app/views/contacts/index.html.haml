@@ -1,0 +1,60 @@
+%section.breadcrumb_area{:style => "background: url(assets/breadcrumb/breadcrumb-bg-5.jpg)"}
+  .container
+    .breadcrumb_inner
+      %h3 Liên hệ chúng tôi
+      .link
+        = link_to "Trang chủ", root_path
+        = link_to "Liên hệ" , '#'
+%section.contact_information.p_100
+  .container
+    .flag_center_title.wow.animated.fadeInUp{"data-wow-delay" => "0.2s"}
+      %h2
+        %img{:alt => "", :src => "assets/icon/flag-2.png"}/
+        Thông Tin Liên Lạc
+    .row.contact_info_inner.justify-content-center
+      .col-lg-4.col-sm-6.wow.animated.fadeIn{"data-wow-delay" => "0.2s"}
+        .contact_info_item
+          %i.icon-map_marker
+          %h4 Showroom
+          %p
+            18 Phan Văn Trị, Phường 7, Q. Gò Vấp, 
+            %br
+            TP.HCM
+      .col-lg-4.col-sm-6.wow.animated.fadeIn{"data-wow-delay" => "0.4s"}
+        .contact_info_item
+          %i.icon-phone1
+          %h4 Hotline
+          %h5
+            %a{:href => "tel: (+84)383 829 828"} 0383 829 828
+            %span (Ms.Duyên)
+      .col-lg-4.col-sm-6.wow.animated.fadeIn{"data-wow-delay" => "0.6s"}
+        .contact_info_item
+          %i.icon-envelop
+          %h4 Mail Addres
+          %h5
+            %a{:href => "minhduyen0608@gmail.com"} minhduyen0608@gmail.com
+          %h5
+            %a{:href => "nguyenthiminhduyen@toyotasaigon.com"} nguyenthiminhduyen@toyotasaigon.com
+%section.main_contact_area.p_100
+  .container
+    .flag_center_title.wow.animated.fadeInUp{"data-wow-delay" => "0.2s"}
+      %h2
+        %img{:alt => "", :src => "assets/icon/flag-2.png"}
+        Liên hệ với chúng tôi
+    .main_contact_inner
+      = form_for @contact , url: contacts_path do |f|
+        - if @contact.errors.any?
+          %ul 
+            - @contact.errors.full_messages.each do |msg|
+              %li= msg 
+        #contactForm.row.contact_form
+          .form-group.col-md-4
+            = f.text_field :name, class: 'form-control', placeholder: 'Tên' 
+          .form-group.col-md-4
+            = f.text_field :phone_number, class: 'form-control', placeholder: 'Số Điện Thoại'
+          .form-group.col-md-4
+            = f.text_field :email, class: 'form-control', placeholder: 'Email'
+          .form-group.col-md-12
+            = f.text_area :message, class: 'form-control', placeholder: 'Tin nhắn', rows: 1
+          .form-group.col-md-12
+            %button.btn.submit_btn.red.form-control{:type => "submit", :value => "submit"} Gửi đi

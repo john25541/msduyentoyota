@@ -1,0 +1,116 @@
+%header.header_area.menu_two.menu_three
+  .top_menu
+    .container
+      .top_menu_inner.d-flex.justify-content-between
+        .left
+          %p
+            %i.icon-clock
+            Hỗ trợ 24/7
+          %p
+            %i.icon-map_marker
+            18 Phan Văn Trị, Phường 7, Q.Gò Vấp, TP.HCM
+        .right
+          %a{:href => "tel:(+84)383 829 828"}
+            %i.icon-phone1
+            %span 038
+            3829 828
+  .main_menu
+    .container
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .navbar-brand
+          = link_to image_tag("http://droitthemes.com/html/motodeal/img/logo-budget.png"), root_path
+        .navbar-brand
+          = link_to image_tag("logo-red.png") , root_path
+        %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+          %span
+        #navbarSupportedContent.collapse.navbar-collapse
+          %ul.nav.navbar-nav.menu_nav.mr-auto
+            %li.dropdown.submenu
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "/", :role => "button"} Giới thiệu
+            %li.dropdown.mega_menu.active
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
+              %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-1.jpg")
+                    Budget Car
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-2.jpg")
+                    Luxury Car
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-3.jpg")
+                    Clasified Car
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-4.jpg")
+                    Car Rental
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-5.jpg")
+                    Taxi Service
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-6.jpg")
+                    Truck Service
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-7.jpg")
+                    Bus
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-8.jpg")
+                    Special Vehicles
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-9.jpg")
+                    Motor Bike
+                %li
+                  %a{:href => "#"}
+                    = image_tag("menu/menu-10.jpg")
+                    Car Repair
+                %li
+                  %a{:href => "yacht.html"}
+                    = image_tag("menu/menu-11.jpg")
+                    Yatch & Boat
+                
+            %li.dropdown.submenu
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dịch vụ
+              %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "service-1.html"} Service 01
+                %li
+                  %a{:href => "service-2.html"} Service 02
+                %li
+                  %a{:href => "service-3.html"} Service 03
+                %li
+                  %a{:href => "service-details.html"} Service Details
+            %li.dropdown.submenu
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} TƯ VẤN
+              %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "shop.html"} Shop
+                %li
+                  %a{:href => "shop-list.html"} Shop List
+                %li
+                  %a{:href => "product-details.html"} Product Details
+                %li
+                  %a{:href => "cart.html"} Cart
+                %li
+                  %a{:href => "checkout.html"} Checkout
+            %li.dropdown.submenu
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Tin tức
+              %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "blog.html"} Blog List
+                %li
+                  %a{:href => "blog-grid.html"} Blog Grid
+                %li
+                  %a{:href => "single-blog.html"} Blog details
+            %li
+              = link_to 'LIÊN HỆ', contacts_path

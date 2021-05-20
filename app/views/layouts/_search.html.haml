@@ -1,0 +1,28 @@
+%section.find_form
+  .container
+    .find_title
+      %i.icon-car_2
+      Find Your Car
+    .find_form_inner.row.m0
+      .find_item
+        %select.nice_select
+          %option{:value => "1"} Select Body
+          %option{:value => "2"} Compact
+          %option{:value => "3"} Coupe
+      .find_item
+        %select.nice_select
+          %option{:value => "1"} Select Make
+          %option{:value => "2"} Acura
+          %option{:value => "3"} BMW
+      .find_item
+        %select.nice_select
+          %option{:value => "1"} Select Milleage
+          %option{:value => "2"} 10000
+          %option{:value => "3"} 20000
+      .find_item
+        %select.nice_select
+          %option{:value => "1"} Select Brand
+          %option{:value => "2"} BMW
+          %option{:value => "3"} Audi
+      .find_item
+        %button.submit_btn{:type => "button"} Search Car

@@ -1,0 +1,19 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: john
+  password: 123QWEasd
+
+development:
+  <<: *default
+  database: msduyentoyota_development
+
+test:
+  <<: *default
+  database: msduyentoyota_test
+
+production:
+  <<: *default
+  database: toyota_production

@@ -1,0 +1,27 @@
+#carouselBanner.carousel.carousel-fade.slide{"data-ride" => "carousel"}
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carouselBanner"}
+    %li{"data-slide-to" => "1", "data-target" => "#carouselBanner"}
+    %li{"data-slide-to" => "2", "data-target" => "#carouselBanner"}
+  .carousel-inner
+    .carousel-item.active
+      = image_tag("home-slider/budget-slider-1.jpg",class: 'd-block w-100')
+      .carousel-caption.d-none.d-md-block
+        %h5 text
+        %p text
+    .carousel-item
+      = image_tag("home-slider/budget-slider-2.jpg",class: 'd-block w-100')
+      .carousel-caption.d-none.d-md-block
+        %h5 text
+        %p text
+    .carousel-item
+      = image_tag("home-slider/budget-slider-3.jpg",class: 'd-block w-100')
+      .carousel-caption.d-none.d-md-block
+        %h5 text
+        %p text
+  %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselBanner", :role => "button"}
+    %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.carousel-control-next{"data-slide" => "next", :href => "#carouselBanner", :role => "button"}
+    %span.carousel-control-next-icon{"aria-hidden" => "true"}
+    %span.sr-only Next

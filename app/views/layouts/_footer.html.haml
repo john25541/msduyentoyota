@@ -1,0 +1,68 @@
+%footer.footer_area.red_footer_area.budget_footer
+  .footer_widgets
+    .container
+      .row.f_widgets_inner
+        .col-lg-3.col-sm-6
+          %aside.f_widget.about_widget
+            %a.f_logo.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :href => "index.html", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+              = image_tag("footer-red-logo.png", srcset: ["footer-red-logo.png"] )
+            %p
+              %i.icon-map_marker_2{"aria-hidden" => "true"}
+              18 Phan Văn Trị, Phường 7, Q. Gò Vấp, TP.HCM
+            %a{:href => "mailto:minhduyen0608@gmail.com"}
+              %i.icon-envelop_2{"aria-hidden" => "true"}
+              %span minhduyen0608@gmail.com
+            %a{:href => "tel:(+84)383 829 828"}
+              %i.icon-phone_2{"aria-hidden" => "true"}
+              0383 829 828
+        .col-lg-2.col-sm-6
+          %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.4s", :style => "visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"}
+            .f_title
+              %h3 Thông Tin
+            %ul.nav.flex-column
+              %li
+                %a{:href => "#"} Về Chúng Tôi
+              %li
+                %a{:href => "#"} Dịch Vụ
+              %li
+                %a{:href => "#"} Sản Phẩm
+              %li
+                %a{:href => "#"} Blog
+              %li
+                = link_to 'Liên Hệ', contacts_path 
+        .col-lg-3.col-sm-6
+          %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.6s", :style => "visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;"}
+            .f_title
+              %h3 Chính Sách
+            %ul.nav.flex-column
+              %li
+                %a{:href => "/"} Điều khoản chính sách
+              %li
+                %a{:href => "#"}  Bảo mật thông tin cá nhân
+              %li
+                %a{:href => "#"} Thông Báo Bản Quyền
+        .col-lg-4.col-sm-6
+          %aside.f_widget.subscribe_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.8s", :style => "visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;"}
+            .f_title
+              %h3 Đăng ký
+            %ul.nav
+              %li
+                %a{:href => "#"}
+                  %i.fab.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fab.fa-youtube
+              %li
+                %a{:href => "#"}
+                  %i.fab.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fab.fa-google-plus
+  .footer_copyright
+    .container
+      .copyright_inner.d-flex.justify-content-between
+        .left
+          %p
+            Copyright Reserved by
+            %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} John Nguyễn
+            #{Time.current.year}
