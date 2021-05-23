@@ -9,7 +9,8 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html {redirect_to finish_contacts_path}
+        ContactMailer.with(contact: @contact).notification.deliver_now
+        format.html {redirect_to root_path, notice: "oke ! good job"}
         format.json {}
       else 
         format.html {render :index}

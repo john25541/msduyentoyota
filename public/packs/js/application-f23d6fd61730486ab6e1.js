@@ -692,7 +692,7 @@ $(document).ready(function () {
 
       return subscriber.then;
     },
-    catch: function _catch(onRejection) {
+    "catch": function _catch(onRejection) {
       return this.then(null, onRejection);
     }
   };
@@ -934,21 +934,21 @@ $(document).ready(function () {
     height: '100%'
   };
 
-  function fillBlack(abstract) {
+  function fillBlack(_abstract) {
     var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
-    if (abstract.attributes && (abstract.attributes.fill || force)) {
-      abstract.attributes.fill = 'black';
+    if (_abstract.attributes && (_abstract.attributes.fill || force)) {
+      _abstract.attributes.fill = 'black';
     }
 
-    return abstract;
+    return _abstract;
   }
 
-  function deGroup(abstract) {
-    if (abstract.tag === 'g') {
-      return abstract.children;
+  function deGroup(_abstract2) {
+    if (_abstract2.tag === 'g') {
+      return _abstract2.children;
     } else {
-      return [abstract];
+      return [_abstract2];
     }
   }
 
@@ -1242,7 +1242,7 @@ $(document).ready(function () {
       val.push({
         tag: 'span',
         attributes: {
-          class: 'sr-only'
+          "class": 'sr-only'
         },
         children: [title]
       });
@@ -1279,7 +1279,7 @@ $(document).ready(function () {
       val.push({
         tag: 'span',
         attributes: {
-          class: 'sr-only'
+          "class": 'sr-only'
         },
         children: [title]
       });
@@ -1542,8 +1542,9 @@ $(document).ready(function () {
   var mutators = {
     replace: function replace(mutation) {
       var node = mutation[0];
-      var abstract = mutation[1];
-      var newOuterHTML = abstract.map(function (a) {
+      var _abstract3 = mutation[1];
+
+      var newOuterHTML = _abstract3.map(function (a) {
         return toHtml(a);
       }).join('\n');
 
@@ -1557,7 +1558,7 @@ $(document).ready(function () {
     },
     nest: function nest(mutation) {
       var node = mutation[0];
-      var abstract = mutation[1]; // If we already have a replaced node we do not want to continue nesting within it.
+      var _abstract4 = mutation[1]; // If we already have a replaced node we do not want to continue nesting within it.
       // Short-circuit to the standard replacement
 
       if (~classArray(node).indexOf(config.replacementClass)) {
@@ -1565,9 +1566,10 @@ $(document).ready(function () {
       }
 
       var forSvg = new RegExp("".concat(config.familyPrefix, "-.*"));
-      delete abstract[0].attributes.style;
-      delete abstract[0].attributes.id;
-      var splitClasses = abstract[0].attributes.class.split(' ').reduce(function (acc, cls) {
+      delete _abstract4[0].attributes.style;
+      delete _abstract4[0].attributes.id;
+
+      var splitClasses = _abstract4[0].attributes["class"].split(' ').reduce(function (acc, cls) {
         if (cls === config.replacementClass || cls.match(forSvg)) {
           acc.toSvg.push(cls);
         } else {
@@ -1579,10 +1581,13 @@ $(document).ready(function () {
         toNode: [],
         toSvg: []
       });
-      abstract[0].attributes.class = splitClasses.toSvg.join(' ');
-      var newInnerHTML = abstract.map(function (a) {
+
+      _abstract4[0].attributes["class"] = splitClasses.toSvg.join(' ');
+
+      var newInnerHTML = _abstract4.map(function (a) {
         return toHtml(a);
       }).join('\n');
+
       node.setAttribute('class', splitClasses.toNode.join(' '));
       node.setAttribute(DATA_FA_I2SVG, '');
       node.innerHTML = newInnerHTML;
@@ -1977,19 +1982,19 @@ $(document).ready(function () {
       element = {
         tag: 'g',
         attributes: {
-          class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
+          "class": "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
         },
         children: [{
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
+            "class": "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
             fill: 'currentColor',
             d: vectorData[0]
           }
         }, {
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
+            "class": "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
             fill: 'currentColor',
             d: vectorData[1]
           }
@@ -2176,7 +2181,7 @@ $(document).ready(function () {
           mark();
           resolve();
         });
-      }).catch(function () {
+      })["catch"](function () {
         mark();
         reject();
       });
@@ -2236,7 +2241,7 @@ $(document).ready(function () {
           var extra = meta.extra;
           extra.attributes[DATA_FA_PSEUDO_ELEMENT] = position;
           findIcon(iconName, prefix).then(function (main) {
-            var abstract = makeInlineSvgAbstract(_objectSpread({}, meta, {
+            var _abstract5 = makeInlineSvgAbstract(_objectSpread({}, meta, {
               icons: {
                 main: main,
                 mask: emptyCanonicalIcon()
@@ -2246,6 +2251,7 @@ $(document).ready(function () {
               extra: extra,
               watchable: true
             }));
+
             var element = DOCUMENT.createElement('svg');
 
             if (position === ':before') {
@@ -2254,12 +2260,12 @@ $(document).ready(function () {
               node.appendChild(element);
             }
 
-            element.outerHTML = abstract.map(function (a) {
+            element.outerHTML = _abstract5.map(function (a) {
               return toHtml(a);
             }).join('\n');
             node.removeAttribute(pendingAttribute);
             resolve();
-          }).catch(reject);
+          })["catch"](reject);
         } else {
           resolve();
         }
@@ -2287,7 +2293,7 @@ $(document).ready(function () {
         end();
         enableObservation();
         resolve();
-      }).catch(function () {
+      })["catch"](function () {
         end();
         enableObservation();
         reject();
@@ -2376,7 +2382,7 @@ $(document).ready(function () {
     });
     Object.defineProperty(val, 'html', {
       get: function get() {
-        return val.abstract.map(function (a) {
+        return val["abstract"].map(function (a) {
           return toHtml(a);
         });
       }
@@ -2612,13 +2618,13 @@ $(document).ready(function () {
       var children = [];
       assembler(function (args) {
         Array.isArray(args) ? args.map(function (a) {
-          children = children.concat(a.abstract);
-        }) : children = children.concat(args.abstract);
+          children = children.concat(a["abstract"]);
+        }) : children = children.concat(args["abstract"]);
       });
       return [{
         tag: 'span',
         attributes: {
-          class: ["".concat(config.familyPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
+          "class": ["".concat(config.familyPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
         },
         children: children
       }];
@@ -3835,7 +3841,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       form.removeChild(button);
     }
 
-    submitButtonsByForm.delete(form);
+    submitButtonsByForm["delete"](form);
   }
 
   function disable(input) {
@@ -12577,7 +12583,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     readyList.then(fn) // Wrap jQuery.readyException in a function so that the lookup
     // happens at the time of error handling instead of callback
     // registration.
-    .catch(function (error) {
+    ["catch"](function (error) {
       jQuery.readyException(error);
     });
     return this;
@@ -14891,10 +14897,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
   function finalPropName(name) {
-    var final = jQuery.cssProps[name] || vendorProps[name];
+    var _final = jQuery.cssProps[name] || vendorProps[name];
 
-    if (final) {
-      return final;
+    if (_final) {
+      return _final;
     }
 
     if (name in emptyStyle) {
@@ -17224,7 +17230,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
           if (conv !== true) {
             // Unless errors are allowed to bubble, catch and return them
-            if (conv && s.throws) {
+            if (conv && s["throws"]) {
               response = conv(response);
             } else {
               try {
@@ -25545,4 +25551,4 @@ module.exports = function (module) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=application-3d82507128eb99f55530.js.map
+//# sourceMappingURL=application-f23d6fd61730486ab6e1.js.map

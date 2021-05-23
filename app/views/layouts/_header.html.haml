@@ -25,9 +25,11 @@
           %span
         #navbarSupportedContent.collapse.navbar-collapse
           %ul.nav.navbar-nav.menu_nav.mr-auto
-            %li.dropdown.submenu
+            %li{class: is_active?("home")}
+              = link_to 'Trang chủ', '/'
+            %li.dropdown.submenu{class: is_active?("introduce")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "/", :role => "button"} Giới thiệu
-            %li.dropdown.mega_menu.active
+            %li.dropdown.mega_menu{class: is_active?("products")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
@@ -76,7 +78,7 @@
                     = image_tag("menu/menu-11.jpg")
                     Yatch & Boat
                 
-            %li.dropdown.submenu
+            %li.dropdown.submenu{class: is_active?("Services")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dịch vụ
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
@@ -88,7 +90,7 @@
                   %a{:href => "service-3.html"} Service 03
                 %li
                   %a{:href => "service-details.html"} Service Details
-            %li.dropdown.submenu
+            %li.dropdown.submenu{class: is_active?("advisorys")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} TƯ VẤN
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
@@ -102,7 +104,7 @@
                   %a{:href => "cart.html"} Cart
                 %li
                   %a{:href => "checkout.html"} Checkout
-            %li.dropdown.submenu
+            %li.dropdown.submenu{class: is_active?("news")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Tin tức
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
@@ -112,5 +114,5 @@
                   %a{:href => "blog-grid.html"} Blog Grid
                 %li
                   %a{:href => "single-blog.html"} Blog details
-            %li
+            %li{class: is_active?("contacts")}
               = link_to 'LIÊN HỆ', contacts_path

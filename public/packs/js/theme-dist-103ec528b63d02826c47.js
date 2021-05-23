@@ -6211,7 +6211,7 @@ __webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.ca
     readyList.then(fn) // Wrap jQuery.readyException in a function so that the lookup
     // happens at the time of error handling instead of callback
     // registration.
-    .catch(function (error) {
+    ["catch"](function (error) {
       jQuery.readyException(error);
     });
     return this;
@@ -8525,10 +8525,10 @@ __webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.ca
 
 
   function finalPropName(name) {
-    var final = jQuery.cssProps[name] || vendorProps[name];
+    var _final = jQuery.cssProps[name] || vendorProps[name];
 
-    if (final) {
-      return final;
+    if (_final) {
+      return _final;
     }
 
     if (name in emptyStyle) {
@@ -10858,7 +10858,7 @@ __webpack_require__(/*! owl.carousel */ "./node_modules/owl.carousel/dist/owl.ca
 
           if (conv !== true) {
             // Unless errors are allowed to bubble, catch and return them
-            if (conv && s.throws) {
+            if (conv && s["throws"]) {
               response = conv(response);
             } else {
               try {
@@ -19088,4 +19088,4 @@ module.exports = function (module) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=theme-dist-f342c2151bb674e8c9d4.js.map
+//# sourceMappingURL=theme-dist-103ec528b63d02826c47.js.map
