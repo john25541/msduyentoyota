@@ -203,14 +203,14 @@ require("owl.carousel");
         $status.text(i + '/' + slick.slideCount);
     });
     $slickElement.slick({
-        autoplay: false,
-        autoplaySpeed: 2500,
-        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 2000,
         dots: false,
         fade: true,
         prevArrow: ".arrow_left",
         nextArrow: ".arrow_right",
-        draggable: false,
+        draggable: true,
     });
 
 

@@ -7,6 +7,7 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
+require("channels/owl.carousel.min.js");
 
 require("bootstrap");
 require("jquery");
@@ -18,7 +19,14 @@ import 'slick-carousel/slick/slick';
 
 
 $(document).ready(function() {
-    $('#carouselBanner').carousel({
-        interval: 2500
-    })
+    (function($) {
+        var fullHeight = function() {
+
+            $('.js-fullheight').css('height', $(window).height() - 100);
+            $(window).resize(function() {
+                $('.js-fullheight').css('height', $(window).height() - 100);
+            });
+        };
+        fullHeight();
+    })(jQuery);
 });
