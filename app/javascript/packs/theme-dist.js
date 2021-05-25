@@ -3,9 +3,12 @@ import { WOW } from 'wowjs';
 require("channels/jquery.nicescroll.min.js");
 require('slick-carousel');
 require("owl.carousel");
+require('popper.js');
+require("channels/jquery.magnific-popup.min.js");
 
 (function($) {
     "use strict"
+
 
     var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------
@@ -335,7 +338,8 @@ require("owl.carousel");
         var scrollAnimate = $('body').data('scroll-animation');
         if (scrollAnimate === true) {
             new WOW({
-                mobile: false
+                mobile: false,
+                live: false
             }).init()
         }
     }
@@ -355,6 +359,7 @@ require("owl.carousel");
     /*----------------------------------------------------*/
     function popupAnimation() {
         if ($('.popup-with-zoom-anim').length) {
+
             $(document).ready(function() {
                 $('.popup-with-zoom-anim').magnificPopup({
                     type: 'inline',
@@ -390,7 +395,7 @@ require("owl.carousel");
             });
         }
     }
-    // popupAnimation();
+    popupAnimation();
 
 
     /*----------------------------------------------------*/

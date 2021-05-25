@@ -7,24 +7,10 @@
           .price_title.d-flex.justify-content-between
             .left
               %h3 La Ferrari Coupe
-              .d-flex
-                .star-rating
-                %a.review_link{:href => "#review"} 324 reviews
             .right
               %h4 $16,000
           .product_info
-            %a.popup-with-zoom-anim{:href => "#getinfoPopup"}
-              %i.icon-info1>
-              Request More Info
-            %a{:href => "compare-car-step-1.html"}
-              %i.icon-compare>
-              Add to Compare
-            %a.popup-with-zoom-anim{:href => "#bookPopup"}
-              %i.icon-steering>
-              Book a Test Drive
-            %a{:href => "#"}
-              %i.icon-share1>
-              Share this Car
+            -#########
           .product_d_slider
             .product_main_slider
               .item
@@ -70,8 +56,7 @@
                   = image_tag("product/product-tab-3.jpg")
       .col-lg-4
         .product_list_right
-          %a.main_btn.red.popup-with-zoom-anim{:href => "#offerPopup"} Make an Offer Price
-          %a.main_btn.red.popup-with-zoom-anim{:href => "#tradePopup"} Trade in Form
+          %a.main_btn.red.popup-with-zoom-anim{:href => "#offerPopup"} Liên hệ báo giá
           %ul.nav.flex-column
             %li
               %a{:href => "#"}
@@ -640,3 +625,4 @@
                     %li
                       Roadside Assistance Years
                       %span 4
+= render "products/popup_contact"

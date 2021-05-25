@@ -7,11 +7,13 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
-require("channels/owl.carousel.min.js");
+
 
 require("bootstrap");
 require("jquery");
 require('popper.js');
+require("channels/jquery.nice-select.min.js");
+require("channels/owl.carousel.min.js");
 
 require("@fortawesome/fontawesome-free");
 

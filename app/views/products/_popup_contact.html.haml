@@ -1,0 +1,21 @@
+.main_contact_inner.form_container.zoom-anim-dialog.mfp-hide#offerPopup
+  .flag_center_title
+    %h2
+      = image_tag("icon/flag-2.png")
+      Báo Giá 
+  = form_for @contact , url: contacts_path do |f|
+    - if @contact.errors.any?
+      %ul 
+        - @contact.errors.full_messages.each do |msg|
+          %li= msg 
+    #contactForm.row.contact_form
+      .form-group.col-md-4
+        = f.text_field :name, class: 'form-control', placeholder: 'Tên'
+      .form-group.col-md-4
+        = f.text_field :phone_number, class: 'form-control', placeholder: 'Số Điện Thoại'
+      .form-group.col-md-4
+        = f.text_field :email, class: 'form-control', placeholder: 'Email'
+      .form-group.col-md-12
+        = f.text_area :message, class: 'form-control', placeholder: 'Tin nhắn', rows: 1
+      .form-group.col-md-12
+        %button.btn.submit_btn.red.form-control{:type => "submit", :value => "submit", disabled: :disabled} Gửi đi
