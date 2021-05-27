@@ -5,6 +5,10 @@ require('slick-carousel');
 require("owl.carousel");
 require('popper.js');
 require("channels/jquery.magnific-popup.min.js");
+require("channels/jquery.counterup.min.js");
+require("channels/jquery.waypoints.min.js");
+
+
 
 (function($) {
     "use strict"
@@ -205,7 +209,7 @@ require("channels/jquery.magnific-popup.min.js");
         var i = (currentSlide ? currentSlide : 0) + 1;
         $status.text(i + '/' + slick.slideCount);
     });
-    $slickElement.slick({
+    $slickElement.not('.slick-initialized').slick({
         autoplay: true,
         autoplaySpeed: 2000,
         speed: 2000,
@@ -216,8 +220,16 @@ require("channels/jquery.magnific-popup.min.js");
         draggable: true,
     });
 
+    // resize banner fix Cannot read property 'add' of null --- slick
+    var fullHeight = function() {
+        $('.js-fullheight').css('height', $(window).height() - 100);
 
-
+        $(window).resize(function() {
+            $('.js-fullheight').css('height', $(window).height() - 100);
+        });
+    };
+    ////----------------------------
+    fullHeight();
 
     function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -234,7 +246,6 @@ require("channels/jquery.magnific-popup.min.js");
             });
         });
     }
-
 
     // function datetime_picker() {
     //     if ($('#datetimepicker3')) {

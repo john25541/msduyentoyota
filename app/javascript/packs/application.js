@@ -20,15 +20,4 @@ require("@fortawesome/fontawesome-free");
 import 'slick-carousel/slick/slick';
 
 
-$(document).ready(function() {
-    (function($) {
-        var fullHeight = function() {
-
-            $('.js-fullheight').css('height', $(window).height() - 100);
-            $(window).resize(function() {
-                $('.js-fullheight').css('height', $(window).height() - 100);
-            });
-        };
-        fullHeight();
-    })(jQuery);
-});
+// $(document).ready(function() {});

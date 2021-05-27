@@ -1,0 +1,113 @@
+= render "layouts/introduce/breadcumb"
+%section.auto_market_area.p_100
+  .container
+    .row.market_inner
+      .col-lg-6
+        .market_text
+          %h3
+            %img{:alt => "", :src => "/assets/icon/flag-2.png"}>/
+            World largest
+            %span automotive
+            marketplace.
+          %ul#myTab.nav.nav-tabs{:role => "tablist"}
+            %li.nav-item
+              %a#home-tab.nav-link.active{"aria-controls" => "home", "aria-selected" => "true", "data-toggle" => "tab", :href => "#home", :role => "tab"} Our Mission
+            %li.nav-item
+              %a#profile-tab.nav-link{"aria-controls" => "profile", "aria-selected" => "false", "data-toggle" => "tab", :href => "#profile", :role => "tab"} Our Mission
+            %li.nav-item
+              %a#contact-tab.nav-link{"aria-controls" => "contact", "aria-selected" => "false", "data-toggle" => "tab", :href => "#contact", :role => "tab"} Our Goal
+          #myTabContent.tab-content
+            #home.tab-pane.fade.show.active{"aria-labelledby" => "home-tab", :role => "tabpanel"}
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation.
+              .row
+                .col-sm-6
+                  .media
+                    .d-flex
+                      %i.icon-car_2
+                    .media-body
+                      %h4 Best Collection
+                      %p Lorem ipsum dolor sit amet consectetur adipisicing
+                .col-sm-6
+                  .media
+                    .d-flex
+                      %i.icon-pricing
+                    .media-body
+                      %h4 Best Pricing
+                      %p Lorem ipsum dolor sit amet consectetur adipisicing
+            #profile.tab-pane.fade{"aria-labelledby" => "profile-tab", :role => "tabpanel"}
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation.
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation.
+            #contact.tab-pane.fade{"aria-labelledby" => "contact-tab", :role => "tabpanel"}
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation.
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation.
+      .col-lg-6
+        .market_image
+          %img.img-fluid{:alt => "", :src => "/assets/minhduyen_staff.jpg"}
+/ ================End Market Area =================
+/ ================Budget Feature Area =================
+%section.budget_feaute_area
+  .container
+    .row.b_feature_inner
+      .col-lg-3.col-sm-6
+        .b_f_item.wow.animated.fadeInLeft{"data-wow-delay" => "0.2s"}
+          .icon
+            %i.icon-free_delivery
+          %a{:href => "#"}
+            %h4 Free Shipping
+          %p Lorem ipsum dolor sit amet after consectetur adipisicing
+      .col-lg-3.col-sm-6
+        .b_f_item.wow.animated.fadeInLeft{"data-wow-delay" => "0.4s"}
+          .icon
+            %i.icon-setting
+          %a{:href => "#"}
+            %h4 5 Free Servicing
+          %p Lorem ipsum dolor sit amet after consectetur adipisicing
+      .col-lg-3.col-sm-6
+        .b_f_item.wow.animated.fadeInLeft{"data-wow-delay" => "0.6s"}
+          .icon
+            %i.icon-support1
+          %a{:href => "#"}
+            %h4 24/7 Help Center
+          %p Lorem ipsum dolor sit amet after consectetur adipisicing
+      .col-lg-3.col-sm-6
+        .b_f_item.wow.animated.fadeInLeft{"data-wow-delay" => "0.8s"}
+          .icon
+            %i.icon-gist
+          %a{:href => "#"}
+            %h4 Sure Gift Packs
+          %p Lorem ipsum dolor sit amet after consectetur adipisicing
+
+%section.car_about_area.yacht_dubble_img.about_counter.p_100
+  .container
+    .flag_center_title.wow.animated.fadeInUp{"data-wow-delay" => "0.2s"}
+      %h2
+        %img{:alt => "", :src => "/assets/icon/flag-2.png"} Lorem ipsum
+    %p.single_text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do them minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute
+    .row.counter_inner
+      .col-lg-3.col-sm-6.wow.animated.fadeInUp{"data-wow-delay" => "0.2s"}
+        .counter_item
+          %h4
+            %span.counter 2,505
+            +
+          %h6 Yacht For Sale
+      .col-lg-3.col-sm-6.wow.animated.fadeInUp{"data-wow-delay" => "0.4s"}
+        .counter_item
+          %h4
+            %span.counter 500
+            +
+          %h6 Global Customers
+      .col-lg-3.col-sm-6.wow.animated.fadeInUp{"data-wow-delay" => "0.6s"}
+        .counter_item
+          %h4
+            %span.counter 30
+            +
+          %h6 Service Centers
+      .col-lg-3.col-sm-6.wow.animated.fadeInUp{"data-wow-delay" => "0.8s"}
+        .counter_item
+          %h4
+            %span.counter 203
+            +
+          %h6 Empolyees
+    .counter_person
+      %img.img-fluid{:alt => "", :src => "/assets/image_team.jpg"}
+  
