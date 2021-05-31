@@ -5,9 +5,11 @@ environment.plugins.append(
     new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: "jquery",
+        jquery: 'jquery',
         "window.jQuery": "jquery",
         Popper: ['popper.js', 'default'],
         moment: 'moment',
+        Rails: ['@rails/ujs']
     })
 )
 const aliasConfig = {

@@ -19,5 +19,10 @@ require("@fortawesome/fontawesome-free");
 
 import 'slick-carousel/slick/slick';
 
+import Swal from 'sweetalert2';
+window.Swal = Swal;
 
-// $(document).ready(function() {});
+global.$ = jQuery;
+
+// $(document).ready(function() {  
+// });

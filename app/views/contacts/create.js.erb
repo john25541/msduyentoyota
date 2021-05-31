@@ -1,0 +1,24 @@
+<%if flash[:success] == true%>
+  Swal.fire({
+      title: 'Thành Công',
+      text: 'Thông tin của bạn đã được gửi đi!',
+      icon: 'success',
+      showCloseButton: true,
+      confirmButtonText: 'Hoàn tất'
+  });
+  $(':input').not(':button, :submit, :hidden').val('')
+  $(".invalid-feedback").remove();
+
+  <%flash[:success] = nil%>
+<%else%>
+  $(".invalid-feedback").remove();
+  
+  $("#contacts_name").append('<small class="invalid-feedback d-block"><%= escape_javascript("#{@error_name[0]}")%></small>');
+  $("#contacts_name").closest(".form-group").addClass("is-invalid");
+  $("#contacts_phone").append('<small class="invalid-feedback d-block"><%= escape_javascript("#{@error_phone[0]}")%></small>');
+  $("#contacts_phone").closest(".form-group").addClass("is-invalid");
+  $("#contacts_message").append('<small class="invalid-feedback d-block"><%= escape_javascript("#{@error_message[0]}")%></small>');
+  $("#contacts_message").closest(".form-group").addClass("is-invalid");
+<%end%>
+
+
