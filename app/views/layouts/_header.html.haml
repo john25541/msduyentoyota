@@ -33,51 +33,11 @@
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-1.jpg")
-                    Budget Car
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-2.jpg")
-                    Luxury Car
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-3.jpg")
-                    Clasified Car
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-4.jpg")
-                    Car Rental
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-5.jpg")
-                    Taxi Service
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-6.jpg")
-                    Truck Service
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-7.jpg")
-                    Bus
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-8.jpg")
-                    Special Vehicles
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-9.jpg")
-                    Motor Bike
-                %li
-                  %a{:href => "#"}
-                    = image_tag("menu/menu-10.jpg")
-                    Car Repair
-                %li
-                  %a{:href => "yacht.html"}
-                    = image_tag("menu/menu-11.jpg")
-                    Yatch & Boat
-                
+                - @car_models.each do |model|
+                  %li
+                    %a{:href => "#"}
+                      = image_tag(model.image)
+                      = model.name
             %li.dropdown.submenu{class: is_active?("Services")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dịch vụ
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'car_models/show'
   get 'introduce', to: 'introduce#index'
   get 'home/index'
 

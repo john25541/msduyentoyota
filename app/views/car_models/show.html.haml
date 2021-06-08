@@ -1,0 +1,4 @@
+- @car_models.each do |model|
+  %h1= model.name
+  - if model.image.present?
+    = image_tag(model.image)
