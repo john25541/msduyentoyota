@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
 
   def index
     @contact = Contact.new
+    @car_models = CarModel.all
   end
 
   def create
