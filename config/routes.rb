@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'car_models/show'
-  get 'introduce', to: 'introduce#index'
   get 'home/index'
 
+  get 'introduces/about_us', to: 'introduce#about_us'
+  get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
+
+  resources :car_models
   resources :products
-  resources :contacts do
-    collection do
-      get :finish
-    end
-  end
+  resources :contacts
 
   root 'home#index'
 end

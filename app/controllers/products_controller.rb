@@ -1,10 +1,8 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    @car_models = CarModel.all
   end
   def show
-    @car_models = CarModel.all
     @product = Product.find(params[:id])
     @contact = Contact.new
   end

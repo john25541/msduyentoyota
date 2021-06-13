@@ -15,6 +15,11 @@
     = javascript_pack_tag 'home', 'data-turbolinks-track': 'reload'
     
   %body{"data-scroll-animation" => 'true'}
+    .preloader
+      .main-loader
+        %span.loader1
+        %span.loader2
+        %span.loader3
     = render 'layouts/header'
     = yield
     = render 'layouts/hotline'

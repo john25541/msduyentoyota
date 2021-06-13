@@ -1,5 +1,6 @@
 class IntroduceController < ApplicationController
-  def index
-    @car_models = CarModel.all
+  def about_us
+  end
+  def developer
   end
 end

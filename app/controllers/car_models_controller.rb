@@ -1,6 +1,5 @@
 class CarModelsController < ApplicationController
   def show
-    @car_models = CarModel.all
   end
   private ####
 

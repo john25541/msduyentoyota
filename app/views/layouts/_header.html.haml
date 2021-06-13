@@ -28,12 +28,18 @@
             %li{class: is_active?("home")}
               = link_to 'Trang chủ', '/'
             %li.dropdown.submenu{class: is_active?("introduce")}
-              = link_to "Giới thiệu", introduce_path
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Giới thiệu
+              %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
+              %ul.dropdown-menu
+                %li
+                  = link_to "Về chúng tôi", introduces_about_us_path
+                %li
+                  = link_to "Nhà phát triển", introduces_developer_path
             %li.dropdown.mega_menu{class: is_active?("products")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
-                - @car_models.each do |model|
+                - $car_models.each do |model|
                   %li
                     %a{:href => "#"}
                       = image_tag (model.image.blob.service_url)

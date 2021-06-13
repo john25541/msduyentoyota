@@ -21,7 +21,9 @@
               %h3 Thông Tin
             %ul.nav.flex-column
               %li
-                %a{:href => "#"} Về Chúng Tôi
+                = link_to 'Về Chúng Tôi', introduces_about_us_path
+              %li
+                = link_to 'Nhà phát triển', introduces_developer_path
               %li
                 %a{:href => "#"} Dịch Vụ
               %li
