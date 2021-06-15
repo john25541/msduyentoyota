@@ -609,6 +609,7 @@
 				}
 			}
 			.media-body{
+				text-align: justify;
 				h4{
 					color: $dip;
 					font: bold 24px $bar;
@@ -683,7 +684,12 @@
 	}
 }
 .b_feature_inner{
-	
+	.b_f_item{
+		text-align: justify;
+		a {
+			color: rgb(32, 233, 32);
+		}
+	}
 }
 .b_f_item{
 	color: #fff;
