@@ -264,6 +264,7 @@
 	}
 }
 .red_footer_area{
+	margin-top: 50px;
 	background: image-url('') no-repeat fixed center center;
 	background-size: cover;
 	position: relative;
@@ -297,8 +298,12 @@
 		}
 	}
 	.about_widget{
+		
 		.f_logo{
 			margin-top: -100px;
+			img {
+				box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+			}
 		}
 	}
 //	.link_widget{
