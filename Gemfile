@@ -38,6 +38,16 @@ gem 'figaro'
 
 gem "cloudinary"
 
+gem 'capistrano', '>=3.12.0'
+gem 'capistrano3-puma'
+gem 'capistrano-rails', require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano-rbenv'
+
+gem 'net-ssh', '>= 6.0.2'
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
