@@ -117,14 +117,15 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "www.msduyentoyota.com.vn" }
+  config.action_mailer.default_url_options = { host: "toyotagovap.vn" }
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
     address:              "smtp.gmail.com",
     port:                 587,
-    user_name:            ENV['EMAIL'],
-    password:             ENV['PASSWORD_EMAIL'],
+    domain:               'toyotagovap.vn',
+    user_name:            'duyen.ntm0608@gmail.com',
+    password:             'tenisjmadvoevaqn',
     authentication:       :plain,
     enable_starttls_auto: true
   }
