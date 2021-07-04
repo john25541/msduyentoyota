@@ -1410,8 +1410,7 @@ __webpack_require__(/*! @fortawesome/fontawesome-free */ "./node_modules/@fortaw
 
 
 window.Swal = sweetalert2__WEBPACK_IMPORTED_MODULE_1___default.a;
-global.$ = jQuery; // $(document).ready(function() {  
-// });
+global.$ = jQuery;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! ./../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
@@ -30171,4 +30170,4 @@ module.exports = function (module) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=application-8d157c5f93db22976278.js.map
+//# sourceMappingURL=application-d3a4d9783a16872078b5.js.map

@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-8d157c5f93db22976278.js",
-  "application.js.map": "/packs/js/application-8d157c5f93db22976278.js.map",
+  "application.js": "/packs/js/application-d3a4d9783a16872078b5.js",
+  "application.js.map": "/packs/js/application-d3a4d9783a16872078b5.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-8d157c5f93db22976278.js"
+        "/packs/js/application-d3a4d9783a16872078b5.js"
       ],
       "js.map": [
-        "/packs/js/application-8d157c5f93db22976278.js.map"
+        "/packs/js/application-d3a4d9783a16872078b5.js.map"
       ]
     },
     "home": {
@@ -16,6 +16,14 @@
       ],
       "js.map": [
         "/packs/js/home-a5c0d5db8b56c2405520.js.map"
+      ]
+    },
+    "introduce": {
+      "js": [
+        "/packs/js/introduce-be89a06c30de97e22631.js"
+      ],
+      "js.map": [
+        "/packs/js/introduce-be89a06c30de97e22631.js.map"
       ]
     },
     "theme-dist": {
@@ -29,6 +37,8 @@
   },
   "home.js": "/packs/js/home-a5c0d5db8b56c2405520.js",
   "home.js.map": "/packs/js/home-a5c0d5db8b56c2405520.js.map",
+  "introduce.js": "/packs/js/introduce-be89a06c30de97e22631.js",
+  "introduce.js.map": "/packs/js/introduce-be89a06c30de97e22631.js.map",
   "theme-dist.js": "/packs/js/theme-dist-c5406cb193a7fc457024.js",
   "theme-dist.js.map": "/packs/js/theme-dist-c5406cb193a7fc457024.js.map"
 }

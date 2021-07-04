@@ -23,6 +23,3 @@ import Swal from 'sweetalert2';
 window.Swal = Swal;
 
 global.$ = jQuery;
-
-// $(document).ready(function() {  
-// });

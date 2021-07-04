@@ -8,8 +8,6 @@ require("channels/jquery.magnific-popup.min.js");
 require("channels/jquery.counterup.min.js");
 require("channels/jquery.waypoints.min.js");
 
-
-
 (function($) {
     "use strict"
 

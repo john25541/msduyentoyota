@@ -1,18 +1,24 @@
 // Place all the styles related to the introduce controller here.
 // They will automatically be included in application.css.
+/*
+  *= require "introduce/style"
+  *= require "introduce/plugins"
+  *= require "introduce/color"
+  *= require "introduce/flaticon"
+*/
 .company_area {
-    background-color: rgb(220, 222, 224);
-    
-    h2, p{
-        color: rgb(39, 38, 38);
+  background-color: rgb(220, 222, 224);
+  
+  h2, p{
+    color: rgb(39, 38, 38);
+  }
+  h2 {
+    position: relative;
+    margin-bottom: 15px;
+    img{
+      position: absolute;
+      left: 0px;
+      top: -26px;
     }
-    h2 {
-        position: relative;
-        margin-bottom: 15px;
-        img{
-            position: absolute;
-            left: 0px;
-            top: -26px;
-        }
-    }
+  }
 }
