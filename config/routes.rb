@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
+  devise_for :admins
 
+  get 'home/index'
   get 'introduces/about_us', to: 'introduce#about_us'
   get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 

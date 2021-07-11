@@ -9,12 +9,13 @@
     = csrf_meta_tags
     = csp_meta_tag
 
-    = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload', defer: true
+    = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload', defer: true
+    = stylesheet_link_tag 'admins', 'data-turbolinks-track': 'reload', defer: true
 
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'home', 'data-turbolinks-track': 'reload'
-  %body{"data-scroll-animation" => 'true'}
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
+    = javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true
+  %body{"data-scroll-animation" => 'true', class: body_class}
     .preloader
       .main-loader
         %span.loader1
@@ -22,10 +23,8 @@
         %span.loader3
     = render 'layouts/header'
     = yield
-    = render 'layouts/news'
     = render 'layouts/facebook_chat'
     = render 'layouts/hotline'
     = render 'layouts/footer'
-
-  = javascript_pack_tag 'theme-dist'
+  = javascript_pack_tag 'theme-dist', defer: true
   
