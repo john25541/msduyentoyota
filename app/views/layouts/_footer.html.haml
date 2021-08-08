@@ -4,7 +4,7 @@
       .row.f_widgets_inner
         .col-lg-3.col-sm-6
           %aside.f_widget.about_widget
-            %a.f_logo.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :href => "index.html", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+            %a.f_logo.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :href => "/", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
               = image_tag("logo_toyota.png")
             %p
               %i.icon-map_marker_2{"aria-hidden" => "true"}
@@ -31,7 +31,7 @@
               %li
                 %a{:href => "#"} Blog
               %li
-                = link_to 'Liên Hệ', contacts_path 
+                = link_to 'Liên Hệ', contacts_path
         .col-lg-3.col-sm-6
           %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.6s", :style => "visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;"}
             .f_title

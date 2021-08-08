@@ -1,0 +1,49 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  .row
+    .col-xs-12
+      = link_to 'Create New product', new_admins_product_path, class: 'btn btn-success btn-sm'
+      %h1 Products
+      .table-responsive
+        %table.table.table-bordered
+          %thead
+            %tr
+              %th ID
+              %th Tên
+              %th Giá
+              %th Năm Sản xuất
+              %th Hộp số
+              %th Động cơ
+              %th Nhiên Liệu
+              %th hình ảnh
+              %th kiểu dáng
+              %th Ghế
+              %th Màu
+              %th Cửa
+              %th xuất xứ
+              %th
+              %th
+              %th
+          %tbody
+            - @admins_products.each do |product|
+              %tr
+                %td= product.id
+                %td= product.name
+                %td= product.price
+                %td= product.year
+                %td= product.transmission
+                %td= product.engine_size
+                %td= product.fuel
+                %td= image_tag( url_for(product.images.first), class: "img-fluid", width: 200)
+                %td= product.body_type
+                %td= product.seats
+                %td= product.colors
+                %td= product.doors
+                %td= product.origin
+                %td= link_to 'Xem', admins_product_path(product)
+                %td= link_to 'Sửa' , edit_admins_product_path(product)
+                %td= link_to 'Xoá', admins_product_path(product) , method: :delete, data: { confirm: 'Are you sure, you want to delete this Product?' }

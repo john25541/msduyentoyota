@@ -1,33 +1,9 @@
--# <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
--#   <div class="field">
--#     <%= f.label :email %><br />
--#     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
--#   </div>
-
--#   <div class="field">
--#     <%= f.label :password %><br />
--#     <%= f.password_field :password, autocomplete: "current-password" %>
--#   </div>
-
--#   <% if devise_mapping.rememberable? %>
--#     <div class="field">
--#       <%= f.check_box :remember_me %>
--#       <%= f.label :remember_me %>
--#     </div>
--#   <% end %>
-
--#   <div class="actions">
--#     <%= f.submit "Log in" %>
--#   </div>
--# <% end %>
-
--# <%= render "admins/shared/links" %> 
 .limiter
   .container-login100
     .wrap-login100
       .login100-form-title{:style => "background-image: url(/assets/background/bg-signin.jpg);"}
         %span.login100-form-title-1
-          Sign In 
+          Sign In
       = form_for(resource, as: resource_name, html: {class: 'login100-form'}, url: session_path(resource_name)) do |f|
         .wrap-input100.m-b-26{"data-validate" => "Username is required"}
           %span.label-input100 Email
@@ -42,6 +18,9 @@
             = f.check_box :remember_me, id: 'ckb1', class: 'input-checkbox100'
             %label.label-checkbox100{:for => "ckb1"}
               Remember me
+        .container-login100-form-btn
+          .form-group{style:"color:red;"}
+            = flash.alert
         .container-login100-form-btn
           %button.login100-form-btn
             Login

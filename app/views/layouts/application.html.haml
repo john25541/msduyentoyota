@@ -5,7 +5,7 @@
     %title Toyota
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
     %link{rel:"icon", href:"/assets/favicon.png?v=2", type: "image/png"}
-    
+
     = csrf_meta_tags
     = csp_meta_tag
 
@@ -21,10 +21,12 @@
         %span.loader1
         %span.loader2
         %span.loader3
-    = render 'layouts/header'
+    = render 'layouts/header' unless params[:controller].split("/").first == 'admins'
+    - if params[:controller].split("/").first == 'admins'
+      .container
+        = render 'admins/shared/nav'
     = yield
     = render 'layouts/facebook_chat'
     = render 'layouts/hotline'
     = render 'layouts/footer'
   = javascript_pack_tag 'theme-dist', defer: true
-  

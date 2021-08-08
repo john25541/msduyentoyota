@@ -1,0 +1,55 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  %p
+    = link_to 'Back', admins_products_path
+    |
+    = link_to 'Edit', edit_admins_product_path
+
+    .row
+      .table-responsive
+        %table.table.table-bordered
+          %tr
+            %th ID
+            %td= @admins_product.id
+          %tr
+            %th Tên
+            %td= @admins_product.name
+          %tr
+            %th Giá
+            %td= @admins_product.price
+          %tr
+            %th Năm Sản xuất
+            %td= @admins_product.year
+          %tr
+            %th Hộp số
+            %td= @admins_product.transmission
+          %tr
+            %th Động cơ
+            %td= @admins_product.engine_size
+          %tr
+            %th Nhiên Liệu
+            %td= @admins_product.fuel
+          %tr
+            %th kiểu dáng
+            %td= @admins_product.body_type
+          %tr
+            %th Ghế
+            %td= @admins_product.seats
+          %tr
+            %th Màu
+            %td= @admins_product.colors
+          %tr
+            %th Cửa
+            %td= @admins_product.doors
+          %tr
+            %th xuất xứ
+            %td= @admins_product.origin
+          %tr
+            %th Hình ảnh
+            %td
+              - @admins_product.images.each do |image|
+                = image_tag( url_for(image), class: "img-fluid", width: 200)
