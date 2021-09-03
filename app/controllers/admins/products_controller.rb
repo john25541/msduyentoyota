@@ -9,6 +9,7 @@ class Admins::ProductsController < Admins::AdminsController
   end
 
   def new
+    @admins_product.build_attachment
     @admins_product = Product.new
   end
 

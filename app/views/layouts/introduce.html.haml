@@ -12,11 +12,12 @@
     %meta{ property: 'og:image:width', content: '272' }
     %meta{ property: 'og:image:height', content: '66' }
     = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'introduce', 'data-turbolinks-track': 'reload'
+    - if params[:action] == 'developer'
+      = stylesheet_link_tag 'introduce', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload'
 
     = javascript_pack_tag 'application','data-turbolinks-track': 'reload'
-    
+
   %body{"data-scroll-animation" => 'true'}
     .preloader
       .main-loader
@@ -30,4 +31,3 @@
     = render 'layouts/footer'
   = javascript_pack_tag 'introduce'
   = javascript_pack_tag 'theme-dist'
-    

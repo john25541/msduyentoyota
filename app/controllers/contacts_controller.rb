@@ -13,12 +13,11 @@ class ContactsController < ApplicationController
         format.html {redirect_to contacts_path}
         flash[:success] = true
         format.js {}
-       
-      else 
+      else
         format.html {render :index}
         format.json {render json: @contact.errors, status: :unprocessable_entity}
         format.js   {}
-        
+
         @error_name = []
         @error_phone = []
         @error_message = []
