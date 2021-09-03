@@ -1,0 +1,16 @@
+.nested-fields
+  .col-md-12
+    .image-border
+      .image-border-content
+        .parent
+          .image-content.image-media-preview
+            .font-awesome-image
+              %i.far.fa-image
+          - if form.object&.image.present?
+            = image_tag( url_for(form.object&.image), class: "img-fluid", width: 200)
+        %label.btn.btn-light.btn-sm{:style => "width: 100%;"}
+          Add a image!
+          %span{:style => "display:none;"}
+            = form.input :image, label: false, as: :file, input_html: { class:"custom-file-input", id: "ImageMedias" }
+    .links{:style => "margin-bottom: 10px;"}
+      = link_to_remove_association raw('<i class="far fa-trash-alt"></i> Remove'), form, class: "btn btn-light btn-sm", :style => "width: 100%; margin-top: -15px;"

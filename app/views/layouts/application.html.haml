@@ -15,6 +15,8 @@
 
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
     = javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true
+    - if params[:controller].split("/").first == 'admins'
+      = javascript_pack_tag 'admins', 'data-turbolinks-track': 'reload', defer: true
   %body{"data-scroll-animation" => 'true', class: body_class}
     .preloader
       .main-loader

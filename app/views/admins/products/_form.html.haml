@@ -1,69 +1,53 @@
 
-= form_for @admins_product, url: url do |f|
-  - if @admins_product.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@admins_product.errors.count, "error")
-        prohibited this product from being saved:
-      %ul
-        - @admins_product.errors.full_messages.each do |msg|
-          %li{style: "color: red;"}= msg
+= simple_form_for @admins_product, url: url do |f|
   .row
     .col-md-6
-      .form-group
-        = f.label :'Tên'
-        = f.text_field :name, class: "form-control"
+      .row
+        .col-md-6
+          .form-group
+            = f.input :name, label: 'Tên sản phẩm', input_html: { class: 'form-control' }
+        .col-md-6
+          .form-group
+            = f.input :price, label: 'Giá sản phẩm', input_html: { class: 'form-control' }
+      .row
+        .col-md-6
+          .form-group
+            = f.input :year, label: 'Năm sản Xuất', as: :numeric , input_html: { class: 'form-control'}
+        .col-md-6
+          .form-group
+            = f.input :transmission, label: 'Transmission', input_html: { class: 'form-control'}
+      .row
+        .col-md-6
+          .form-group
+            = f.input :body_type, label: 'Kiểu dáng xe', input_html: { class: 'form-control'}
+        .col-md-6
+          .form-group
+            = f.input :seats, label: 'Số ghế', as: :numeric, input_html: { class: 'form-control'}
+      .row
+        .col-md-6
+          .form-group
+            = f.input :doors, label: 'Số cửa', as: :numeric, input_html: { class: 'form-control'}
+        .col-md-6
+          .form-group
+            = f.input :colors, label: 'Số màu', as: :numeric, input_html: { class: 'form-control'}
+      .row
+        .col-md-6
+          .form-group
+            = f.input :engine_size, label: 'kích thước động cơ', as: :numeric, input_html: { class: 'form-control'}
+        .col-md-6
+          .form-group
+            = f.input :fuel, label: 'Nhiên liệu', input_html: { class: 'form-control'}
+      .row
+        .col-md-6
+          .form-group
+            = f.input :fuel, label: 'Xuất xứ', input_html: { class: 'form-control'}
     .col-md-6
-      .form-group
-        = f.label :'Giá'
-        = f.number_field :price, class: "form-control"
-  .row
-    .col-md-6
-      .form-group
-        = f.label :'Năm sản Xuất'
-        = f.number_field :year, class: "form-control"
-    .col-md-6
-      .form-group
-        = f.label :transmission
-        = f.text_field :transmission, class: "form-control"
-  .row
-    .col-md-6
-      .form-group
-        = f.label :'Kiểu dáng'
-        = f.text_field :body_type, class: "form-control"
-    .col-md-6
-      .form-group
-        = f.label :'Số ghế'
-        = f.number_field :seats, class: "form-control"
-  .row
-    .col-md-6
-      .form-group
-        = f.label :'Số cửa'
-        = f.number_field :doors, class: "form-control"
-    .col-md-6
-      .form-group
-        = f.label :'Số màu'
-        = f.number_field :colors, class: "form-control"
-  .row
-    .col-md-6
-      .form-group
-        = f.label :'kích thước động cơ'
-        = f.number_field :engine_size, class: "form-control"
-    .col-md-6
-      .form-group
-        = f.label :'Nhiên liệu'
-        = f.text_field :fuel, class: "form-control"
-  .row
-    .col-md-6
-      .form-group
-        = f.label :'Xuất xứ'
-        = f.text_field :origin, class: "form-control"
-  .row
-    .col-md-12
-      .form-group
-        = f.label :images
-        = f.file_field :images, class: "form-control", multiple: true
-  .clearfix
-  .col-xs-12
-    = f.submit "Save", class: "btn btn-primary"
+      .row
+        = f.simple_fields_for :attachments, f.object.attachments.present? ? f.object.attachments : f.object.attachments.build do |attachment|
+          = render 'attachment_fields', form: attachment
+        #add_attachment.links
+          = link_to_add_association raw('<i class="fas fa-plus">Add more</i>'), f, :attachments, form_name: 'form'
+    .clearfix
+    .col-xs-12
+      = f.submit "Save", class: "btn btn-primary"
 %br

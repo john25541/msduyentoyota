@@ -14,10 +14,10 @@ require("channels/jquery.waypoints.min.js");
 
     var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
 	-------------------------------------------------------------------------------*/
 
-    //* Navbar Fixed  
+    //* Navbar Fixed
     function navbarFixed() {
         if ($('.header_area').length) {
             $(window).scroll(function() {

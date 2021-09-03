@@ -14,6 +14,7 @@ require("jquery");
 require('popper.js');
 require("channels/jquery.nice-select.min.js");
 require("channels/owl.carousel.min.js");
+require("@nathanvda/cocoon")
 
 require("@fortawesome/fontawesome-free");
 
