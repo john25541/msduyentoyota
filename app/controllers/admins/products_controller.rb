@@ -9,7 +9,6 @@ class Admins::ProductsController < Admins::AdminsController
   end
 
   def new
-    @admins_product.build_attachment
     @admins_product = Product.new
   end
 
@@ -48,6 +47,8 @@ class Admins::ProductsController < Admins::AdminsController
     end
 
     def admins_product_params
+      car_model = CarModel.find_by(name: params[:product][:car_model_id])
+      params[:product][:car_model_id] = car_model&.id
       params.require(:product).permit!
     end
 end

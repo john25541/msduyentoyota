@@ -16,6 +16,9 @@
             %th ID
             %td= @admins_product.id
           %tr
+            %th Car Model
+            %td= car_model_for_product(@admins_product.car_model_id)
+          %tr
             %th Tên
             %td= @admins_product.name
           %tr

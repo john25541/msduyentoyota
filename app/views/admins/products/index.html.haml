@@ -38,7 +38,7 @@
                 %td= product.transmission
                 %td= product.engine_size
                 %td= product.fuel
-                %td= image_tag(url_for(product.model_files.first&.image), class: "img-fluid", width: 200)
+                %td= image_tag(url_for(product.attachments.first&.image), class: "img-fluid", width: 200)
                 %td= product.body_type
                 %td= product.seats
                 %td= product.colors
