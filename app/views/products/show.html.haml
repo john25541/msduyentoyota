@@ -6,108 +6,69 @@
         .product_details_left
           .price_title.d-flex.justify-content-between
             .left
-              %h3 La Ferrari Coupe
+              %h3= @product.name
             .right
-              %h4 $16,000
+              %h4= "#{number_to_currency(@product.price, precision: 0, unit: '')} VND"
           .product_info
             -#########
           .product_d_slider
             .product_main_slider
-              .item
-                = image_tag("product/product-details-1.jpg")
-              .item
-                = image_tag("product/product-details-2.jpg")
-              .item
-                = image_tag("product/product-details-3.jpg")
-              .item
-                = image_tag("product/product-details-4.jpg")
-              .item
-                = image_tag("product/product-details-6.jpg")
-              .item
-                = image_tag("product/product-details-1.jpg")
-              .item
-                = image_tag("product/product-details-2.jpg")
-              .item
-                = image_tag("product/product-details-3.jpg")
+              - @product.attachments.each do |attachment|
+                .item
+                  = image_tag(url_for(attachment.image))
             .product_nav_slider
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-1.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-2.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-3.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-4.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-6.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-1.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-2.jpg")
-              .item
-                .img_inner
-                  = image_tag("product/product-tab-3.jpg")
+              - @product.attachments.each do |attachment|
+                .item
+                  = image_tag(url_for(attachment.image))
       .col-lg-4
         .product_list_right
           %a.main_btn.red.popup-with-zoom-anim{:href => "#offerPopup"} Liên hệ báo giá
           %ul.nav.flex-column
             %li
-              %a{:href => "#"}
-                %i.icon-clock_2>
-                Date
-                %span 12 June 2019
+              %a
+                %i.icon-calendar-check-o
+                Năm sản xuất
+                %span= @product.year
             %li
-              %a{:href => "#"}
-                %i.icon-gear1>
+              %a
+                %i.icon-gear1
                 Transmission
-                %span Automatic
+                %span= @product.transmission
             %li
-              %a{:href => "#"}
-                %i.icon-calendar-check-o>
-                Year
-                %span 2019
+              %a
+                %i.icon-engine
+                Dung tích xy lanh
+                %span= "#{@product.cylinder_capacity} cc"
             %li
-              %a{:href => "#"}
-                %i.icon-engine>
-                Engine Size
-                %span 3200 cc
+              %a
+                %i.icon-car_3
+                Kiểu dáng
+                %span= @product.body_type
             %li
-              %a{:href => "#"}
-                %i.icon-car_3>
-                Body Type
-                %span Sedan
+              %a
+                %i.icon-engine
+                Nhiên Liệu
+                %span= @product.fuel
             %li
-              %a{:href => "#"}
-                %i.icon-engine>
-                Engine Type
-                %span Petrol
+              %a
+                %i.icon-assembly
+                Xuất xứ
+                %span= @product.origin
             %li
-              %a{:href => "#"}
-                %i.icon-assembly>
-                Assembly
-                %span Germany
+              %a
+                %i.icon-seat
+                Số chỗ ngồi
+                %span= @product.seats
             %li
-              %a{:href => "#"}
-                %i.icon-seat>
-                Seat
-                %span 5
-            %li
-              %a{:href => "#"}
+              %a
                 %i.icon-color_plate>
-                Color
-                %span.color
+                Số màu
+                %span= @product.colors
             %li
-              %a{:href => "#"}
-                %i.icon-door>
-                Doors
-                %span 4
+              %a
+                %i.icon-door
+                Số cửa
+                %span= @product.doors
     .product_overview_text
       %h4 Overview
       %p
@@ -117,42 +78,42 @@
         .col-lg-6
           %ul.nav.flex-column
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Strong engine options, including a plug-in hybrid
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Standard adaptive air suspension delivers a comfortable
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Exceptional rear passenger space
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Abundant standard equipment, including safety tech
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               No standard-length wheelbase model available
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Not the driver-focused benchmark it once was
         .col-lg-6
           %ul.nav.flex-column
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Strong engine options, including a plug-in hybrid
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Standard adaptive air suspension delivers a comfortable
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Exceptional rear passenger space
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Abundant standard equipment, including safety tech
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               No standard-length wheelbase model available
             %li
-              = image_tag("icon/green.png") 
+              = image_tag("icon/green.png")
               Not the driver-focused benchmark it once was
     .specification_area
       .single_b_title
