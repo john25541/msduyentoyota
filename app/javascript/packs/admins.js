@@ -1,4 +1,4 @@
-$("#ImageMedias").change(function () {
+$(document).on('input', '.attach_image',function () {
     if (typeof (FileReader) != "undefined") {
         let dvPreview = $(this).parents(".image-border").find(".image-media-preview");
         dvPreview.html("");

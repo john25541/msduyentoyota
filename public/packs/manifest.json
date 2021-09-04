@@ -1,15 +1,15 @@
 {
-  "admins.js": "/packs/js/admins-9209f37904b679225a50.js",
-  "admins.js.map": "/packs/js/admins-9209f37904b679225a50.js.map",
+  "admins.js": "/packs/js/admins-cc5d328e7ec84d2904be.js",
+  "admins.js.map": "/packs/js/admins-cc5d328e7ec84d2904be.js.map",
   "application.js": "/packs/js/application-baffd9d163809fcc8008.js",
   "application.js.map": "/packs/js/application-baffd9d163809fcc8008.js.map",
   "entrypoints": {
     "admins": {
       "js": [
-        "/packs/js/admins-9209f37904b679225a50.js"
+        "/packs/js/admins-cc5d328e7ec84d2904be.js"
       ],
       "js.map": [
-        "/packs/js/admins-9209f37904b679225a50.js.map"
+        "/packs/js/admins-cc5d328e7ec84d2904be.js.map"
       ]
     },
     "application": {
