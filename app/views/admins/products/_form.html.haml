@@ -45,6 +45,9 @@
             = f.input :fuel, label: 'Nhiên liệu', input_html: { class: 'form-control'}
     .col-md-6
       .row
+        .form-group
+          = f.input :slug, label: 'Đường dẫn đến sản phẩm', input_html: { class: 'form-control'}
+      .row
         = f.simple_fields_for :attachments, f.object.attachments.present? ? f.object.attachments : f.object.attachments.build do |attachment|
           = render 'attachment_fields', form: attachment
         #add_attachment.links

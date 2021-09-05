@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 
   resources :car_models
-  resources :products
+  resources :products do
+    get '/:slug', on: :collection, to: 'products#show'
+  end
   resources :contacts
 
   root 'home#index'

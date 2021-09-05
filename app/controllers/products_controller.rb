@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find_by_slug(params[:slug])
     @contact = Contact.new
   end
 

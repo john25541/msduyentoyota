@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_04_155101) do
+ActiveRecord::Schema.define(version: 2021_09_05_043149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2021_09_04_155101) do
     t.string "fuel"
     t.string "origin"
     t.bigint "car_model_id"
+    t.string "slug"
     t.index ["car_model_id"], name: "index_products_on_car_model_id"
   end
 
