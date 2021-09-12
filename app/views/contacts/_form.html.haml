@@ -1,16 +1,18 @@
-.main_contact_inner 
-  = form_for @contact , url: contacts_path, remote: true do |f|
+.main_contact_inner
+  = simple_form_for @contact , url: contacts_path, remote: true do |f|
     #contactForm.row.contact_form
-      .form-group.col-md-4
-        = f.text_field :name, class: 'form-control is-invalid', placeholder: '*Tên' 
+      .form-group.col-md-3
+        = f.input :name, label: false, placeholder: '*Tên', input_html: { class: 'form-control' }
         #contacts_name
-      .form-group.col-md-4
-        = f.text_field :phone_number, class: 'form-control', placeholder: '*Số Điện Thoại'
+      .form-group.col-md-3
+        = f.input :phone_number, label: false, placeholder: '*Số Điện Thoại', input_html: { class: 'form-control' }
         #contacts_phone
-      .form-group.col-md-4
-        = f.text_field :email, class: 'form-control', placeholder: 'Email'
+      .form-group.col-md-3
+        = f.input :email, label: false, placeholder: 'Email', input_html: { class: 'form-control' }
+      .form-group.col-md-3
+        = f.input :product, label: false, collection: Product.all.map{|product| product.name}, selected: @product&.name, input_html: { class: 'form-control'}
       .form-group.col-md-12
-        = f.text_area :message, class: 'form-control', placeholder: '*Tin nhắn', rows: 1
+        = f.input :message, label: false, placeholder: '*Tin nhắn', input_html: { class: 'form-control' }
         #contacts_message
       .form-group.col-md-12
         %button.btn.submit_btn.red.form-control{:type => "submit", :value => "submit"} Gửi đi

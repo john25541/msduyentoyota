@@ -12,7 +12,7 @@
   <%flash[:success] = nil%>
 <%else%>
   $(".invalid-feedback").remove();
-  
+
   $("#contacts_name").append('<small class="invalid-feedback d-block"><%= escape_javascript("#{@error_name[0]}")%></small>');
   $("#contacts_name").closest(".form-group").addClass("is-invalid");
   $("#contacts_phone").append('<small class="invalid-feedback d-block"><%= escape_javascript("#{@error_phone[0]}")%></small>');
