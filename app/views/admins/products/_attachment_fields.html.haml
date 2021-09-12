@@ -14,5 +14,7 @@
           Add a image!
           %span{:style => "display:none;"}
             = form.input :image, label: false, as: :file, input_html: { class:"attach_image"}
+    .form-group
+      = form.input :name, label: "Tên và mã màu", input_html: { class:"form-control"}
     .links{:style => "margin-bottom: 10px;"}
       = link_to_remove_association raw('<i class="far fa-trash-alt"></i> Remove'), form, class: "btn btn-light btn-sm", :style => "width: 100%; margin-top: -15px;"

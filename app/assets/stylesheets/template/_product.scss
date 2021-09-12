@@ -1733,10 +1733,8 @@
 /* Procut Details Area css
 ============================================================================================ */
 .product_details_area{
-	
 }
 .product_details_inner{
-	
 }
 .product_details_left{
 	.price_title{
@@ -1786,6 +1784,17 @@
 		}
 	}
 }
+
+@media screen and (min-width: 1025px) {
+	.product_main_slider{
+		.item{
+			position: relative;
+			left: 60%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
 .product_d_slider{
 	.product_main_slider{
 		.item{
@@ -1825,7 +1834,6 @@
 				}
 			}
 		}
-		
 	}
 }
 .product_overview_text{
@@ -2010,7 +2018,7 @@
 	}
 }
 .left_product_sidebar{
-	
+
 }
 .p_search_widget{
 	input{

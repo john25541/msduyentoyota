@@ -39,7 +39,7 @@ ARRAY_CAR_MODEL = [
   {
     name: 'Land Cruiser',
     lowest_price: 4030000000,
-    image_url: 'http://toyotasg.com.vn/data/news/1869/dnh2et.png'
+    image_url: 'http://toyotasg.com.vn/data/news/1869/o4cvco.png'
   },
   {
     name: 'Hilux',

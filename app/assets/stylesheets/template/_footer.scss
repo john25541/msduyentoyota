@@ -830,21 +830,20 @@
 }
 .luxuary_footer_widget{
 	.l_f_widget_inner{
-		
 	}
 }
 .l_f_title{
 	margin-bottom: 60px;
 	h3{
 		color: #fff;
-		font: normal 24px $bar;
+		font: bold 24px $bar;
 		margin-bottom: 0px;
 		position: relative;
 		&:before{
 			content: "";
-			height: 2px;
-			width: 50px;
-			background: rgba(255, 255, 255, .10);
+			height: 4px;
+			width: 100px;
+			background: rgba(252, 249, 249, 0.952);
 			position: absolute;
 			left: 0px;
 			bottom: -33px;
@@ -852,7 +851,6 @@
 	}
 }
 .l_f_widget{
-	
 }
 .l_link_widget{
 	.nav{

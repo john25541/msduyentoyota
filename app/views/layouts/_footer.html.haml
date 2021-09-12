@@ -6,6 +6,8 @@
           %aside.f_widget.about_widget
             %a.f_logo.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :href => "/", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
               = image_tag("logo_toyota.png")
+            .l_f_title
+              %h3 Toyota Đông sài gòn
             %p
               %i.icon-map_marker_2{"aria-hidden" => "true"}
               18 Phan Văn Trị, Phường 7, Q. Gò Vấp, TP.HCM
@@ -15,6 +17,11 @@
             %a{:href => "tel:(+84)383 829 828"}
               %i.icon-phone_2{"aria-hidden" => "true"}
               0383 829 828
+            %p
+              %i.icon-clock
+              Thứ 2-6: 7h30 -> 17h
+              %br
+              Thứ 7: 7h30 -> 16h
         .col-lg-2.col-sm-6
           %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.4s", :style => "visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"}
             .f_title
@@ -25,41 +32,44 @@
               %li
                 = link_to 'Nhà phát triển', introduces_developer_path
               %li
-                %a{:href => "#"} Dịch Vụ
+                %a Dịch Vụ
               %li
-                %a{:href => "#"} Sản Phẩm
+                %a Sản Phẩm
               %li
-                %a{:href => "#"} Blog
+                %a Blog
               %li
                 = link_to 'Liên Hệ', contacts_path
-        .col-lg-3.col-sm-6
-          %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.6s", :style => "visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;"}
-            .f_title
-              %h3 Chính Sách
-            %ul.nav.flex-column
-              %li
-                %a{:href => "#"} Điều khoản chính sách
-              %li
-                %a{:href => "#"}  Bảo mật thông tin cá nhân
-              %li
-                %a{:href => "#"} Thông Báo Bản Quyền
-        .col-lg-4.col-sm-6
-          %aside.f_widget.subscribe_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.8s", :style => "visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;"}
-            .f_title
-              %h3 Đăng ký
-            %ul.nav
-              %li
-                %a{:href => "#"}
-                  %i.fab.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fab.fa-youtube
-              %li
-                %a{:href => "#"}
-                  %i.fab.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fab.fa-google-plus
+        .row.col-lg-7.col-sm-6
+          .col-sm-6
+            %aside.f_widget.link_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.6s", :style => "visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;"}
+              .f_title
+                %h3 Chính Sách
+              %ul.nav.flex-column
+                %li
+                  %a Điều khoản chính sách
+                %li
+                  %a  Bảo mật thông tin cá nhân
+                %li
+                  %a Thông Báo Bản Quyền
+          .col-sm-6
+            %aside.f_widget.subscribe_widget.wow.fadeInUp.animated{"data-wow-delay" => "0.8s", :style => "visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;"}
+              .f_title
+                %h3 Đăng ký
+              %ul.nav
+                %li
+                  %a
+                    %i.fab.fa-facebook
+                %li
+                  %a
+                    %i.fab.fa-youtube
+                %li
+                  %a
+                    %i.fab.fa-twitter
+                %li
+                  %a
+                    %i.fab.fa-google-plus
+          .col-lg-12
+            %iframe.wow.fadeInUp.animated{:allowfullscreen => "", :height => "120%", :width => "100%", :loading => "lazy", :src => "https://www.google.com/maps/embed/v1/place?key=AIzaSyCFbe95JkItXofxWWlr36-i8nto-IUt5KE    &q=TTOYOTA GÒ VẤP - PHAN VĂN TRỊ", "data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
   .footer_copyright
     .container
       .copyright_inner.d-flex.justify-content-between

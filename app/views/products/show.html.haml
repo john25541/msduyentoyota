@@ -20,15 +20,12 @@
               - @product.attachments.each do |attachment|
                 .item
                   = image_tag(url_for(attachment.image))
+                  .item_name{style: 'text-align: center;'}
+                    = attachment.name
       .col-lg-4
         .product_list_right
           %a.main_btn.red.popup-with-zoom-anim{:href => "#offerPopup"} Liên hệ báo giá
           %ul.nav.flex-column
-            %li
-              %a
-                %i.icon-calendar-check-o
-                Năm sản xuất
-                %span= @product.year
             %li
               %a
                 %i.icon-gear1
@@ -64,11 +61,6 @@
                 %i.icon-color_plate>
                 Số màu
                 %span= @product.colors
-            %li
-              %a
-                %i.icon-door
-                Số cửa
-                %span= @product.doors
     .product_overview_text
       %h4 Overview
       %p
