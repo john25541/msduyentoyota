@@ -8,7 +8,10 @@
 	
 }
 .f_widgets_inner{
-	padding-bottom: 60px;
+	padding-bottom: 30px;
+	.google-map {
+		padding-top: 30px;
+	}
 }
 .f_widget{}
 .f_title{
@@ -859,7 +862,7 @@
 			a{
 				color: rgba(255, 255, 255, .30);
 				font: normal 16px $bar;
-				@include transition; 
+				@include transition;
 				&:hover{
 //					color: $baseColor;
 				}
