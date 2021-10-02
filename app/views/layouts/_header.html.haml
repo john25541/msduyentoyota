@@ -28,7 +28,7 @@
             %li{class: is_active?("home")}
               = link_to 'Trang chủ', '/'
             %li.dropdown.submenu{class: is_active?("introduce")}
-              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Giới thiệu
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#", :role => "button"} Giới thiệu
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
@@ -39,9 +39,9 @@
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
-                - $car_models.each do |model|
+                - @car_models.each do |model|
                   %li
-                    %a
+                    %a{href: "/products/#{Product&.first&.slug}"}
                       = image_tag (model.image.blob.service_url)
                       = model.name
             %li.dropdown.submenu{class: is_active?("Services")}
@@ -65,7 +65,7 @@
                 %li
                   %a{:href => "shop-list.html"} Shop List
                 %li
-                  %a{:href => "product-details.html"} Product Details
+                  %a{:href => "/products/#{Product&.first&.slug}"} Product Details
                 %li
                   %a{:href => "cart.html"} Cart
                 %li

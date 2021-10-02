@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
-  $car_models = CarModel.all
+  before_action :set_car_model
+
+  protected
+
+  def set_car_model
+    @car_models = CarModel.all
+  end
 
   def after_sign_in_path_for(resource)
     admins_path
