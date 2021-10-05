@@ -423,7 +423,6 @@
 		line-height: 38px;
 		text-transform: uppercase;
 		font-weight: bold;
-		
 	}
 }
 .l_collection_item{
@@ -434,6 +433,7 @@
 	box-shadow: 0px 2px 4px 0px rgba(0, 121, 175, 0.08);
 	@include transition;
 	.car_img{
+		padding-top: 50px;
 		overflow: hidden;
 		position: relative;
 		z-index: 2;
@@ -442,7 +442,7 @@
 		}
 		.rating{
 			position: absolute;
-			right: 20px; 
+			right: 20px;
 			bottom: 20px;
 			a{
 				color: #f6cc38;
@@ -452,16 +452,15 @@
 	.text_body{
 		padding: 25px 30px 20px 30px;
 		h4{
-			display: inline-block;
+			display: block;
 			color: $dip;
-			font: bold 24px $bar;
+			font: bold 22px $bar;
 			margin-bottom: 12px;
 			@include transition;
 		}
 		h5{
-			display: inline-block;
-			float: right;
-			font: bold 24px $bar;
+			display: block;
+			font: bold 20px $bar;
 		}
 		p{
 			margin-bottom: 0px;
@@ -1744,7 +1743,7 @@
             align-items: center;
 			h3{
 				color: $dip;
-				font: bold 36px $bar;
+				font: bold 34px $bar;
 				margin-bottom: 20px;
                 padding-right: 14px;
 			}
@@ -1757,7 +1756,7 @@
 		}
 		.right{
 			h4{
-				font: bold 36px $bar;
+				font: bold 34px $bar;
 				margin-bottom: 0px;
 			}
 		}
@@ -1785,15 +1784,15 @@
 	}
 }
 
-// @media screen and (min-width: 1025px) {
-// 	.product_main_slider{
-// 		.item{
-// 			position: relative;
-// 			left: 60%;
-// 			transform: translateX(-50%);
-// 		}
-// 	}
-// }
+@media screen and (min-width: 1025px) {
+	.product_main_slider{
+		.item{
+			position: relative;
+			left: 60%;
+			transform: translateX(-50%);
+		}
+	}
+}
 
 .product_d_slider{
 	.product_main_slider{
