@@ -14,6 +14,7 @@
             %tr
               %th ID
               %th Tên
+              %th Đường dẫn
               %th Giá chỉ từ
               %th Hình mẫu
               %th Hình mẫu thu nhỏ
@@ -25,6 +26,7 @@
               %tr
                 %td= car_model.id
                 %td= car_model.name
+                %td= car_model.slug
                 %td= car_model.lowest_price
                 %td
                   - if car_model.image.present?

@@ -93,7 +93,9 @@ namespace :car_model do
   end
 
   def import_car_model(object)
-    car_model = CarModel.create(name: object[:name], lowest_price: object[:lowest_price])
+    car_model = CarModel.create(name: object[:name], lowest_price: object[:lowest_price],
+      slug: object[:name].downcase.gsub(' ', '-')
+    )
     downloaded_image = URI.parse(object[:image_url]).open
     car_model.image.attach(io: downloaded_image  , filename: "#{object[:name].downcase}#{object[:image_url][-4, 4]}")
   end
