@@ -17,3 +17,5 @@
         = link_to 'Products', admins_products_path, { class: "nav-link  #{ params[:controller].include?("products") ? "active" : "" }" }
       %li.nav-item
         = link_to 'Car models', admins_car_models_path, { class: "nav-link  #{ params[:controller].include?("car_models") ? "active" : "" }" }
+      %li.nav-item
+        = link_to 'Contacts', admins_contacts_path, { class: "nav-link  #{ params[:controller].include?("contacts") ? "active" : "" }" }

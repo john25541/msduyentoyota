@@ -1,0 +1,25 @@
+.container
+  %p
+    = link_to 'Back', admins_contacts_path
+
+    .row
+      .table-responsive
+        %table.table.table-bordered
+          %tr
+            %th ID
+            %td= @admins_conact.id
+          %tr
+            %th Tên khách hàng
+            %td= @admins_conact.name
+          %tr
+            %th Số điện thoại
+            %td= @admins_conact.phone_number
+          %tr
+            %th Email
+            %td= @admins_conact.email
+          %tr
+            %th Xe cần tư vấn
+            %td= @admins_conact.product
+          %tr
+            %th Tin nhắn
+            %td= @admins_conact.message

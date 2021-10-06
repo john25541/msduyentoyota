@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     get '/',        to: 'dashboard#index'
     resources :products
     resources :car_models
+    resources :contacts
   end
 
-  # get 'home/index'
   get 'introduces/about_us', to: 'introduce#about_us'
   get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 

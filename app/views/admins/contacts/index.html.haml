@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-xs-12
+      %h1 Contacts
+      .table-responsive
+        %table.table.table-bordered
+          %thead
+            %tr
+              %th ID
+              %th Tên khách hàng
+              %th Số điện thoại
+              %th Emmail
+              %th Xe cần tư vấn
+              %th Tin nhắn
+              %th
+          %tbody
+            - @admins_conacts.each do |contact|
+              %tr
+                %td= contact.id
+                %td= contact.name
+                %td= contact.phone_number
+                %td= contact.email
+                %td= contact.product
+                %td= contact.message.truncate_words(10)
+                %td= link_to 'Xem chi tiết', admins_contact_path(contact)
