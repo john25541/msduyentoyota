@@ -1,0 +1,37 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  .row
+    .col-xs-12
+      = link_to 'Create car model', new_admins_car_model_path, class: 'btn btn-success btn-sm'
+      %h1 Car models
+      .table-responsive
+        %table.table.table-bordered
+          %thead
+            %tr
+              %th ID
+              %th Tên
+              %th Giá chỉ từ
+              %th Hình mẫu
+              %th Hình mẫu thu nhỏ
+              %th
+              %th
+              %th
+          %tbody
+            - @admins_car_models.each do |car_model|
+              %tr
+                %td= car_model.id
+                %td= car_model.name
+                %td= car_model.lowest_price
+                %td
+                  - if car_model.image.present?
+                    = image_tag(car_model.image&.blob&.service_url, class: "img-fluid", width: 200)
+                %td
+                  - if car_model.thumbnail_image.present?
+                    = image_tag(car_model.thumbnail_image&.blob&.service_url, class: "img-fluid", width: 200)
+                %td= link_to 'Xem', admins_car_model_path(car_model)
+                %td= link_to 'Sửa' , edit_admins_car_model_path(car_model)
+                %td= link_to 'Xoá', admins_car_model_path(car_model) , method: :delete, data: { confirm: 'Are you sure, you want to delete this Car model?' }

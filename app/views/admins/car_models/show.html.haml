@@ -1,0 +1,33 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  %p
+    = link_to 'Back', admins_car_models_path
+    |
+    = link_to 'Edit', edit_admins_car_model_path
+
+    .row
+      .table-responsive
+        %table.table.table-bordered
+          %tr
+            %th ID
+            %td= @admins_car_model.id
+          %tr
+            %th Tên
+            %td= @admins_car_model.name
+          %tr
+            %th Giá chỉ từ
+            %td= @admins_car_model.lowest_price
+          %tr
+            %th Hình ảnh
+            %td
+              - if @admins_car_model.image.present?
+                = image_tag(@admins_car_model.image&.blob&.service_url, class: "img-fluid", width: 200)
+          %tr
+            %th Hình mẫu thu nhỏ
+            %td
+              - if @admins_car_model.thumbnail_image.present?
+                = image_tag(@admins_car_model.thumbnail_image&.blob&.service_url, class: "img-fluid", width: 200)

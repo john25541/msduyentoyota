@@ -1,0 +1,46 @@
+= simple_form_for @admins_car_model, url: url do |f|
+  .row
+    .col-md-6
+      .row
+        .col-md-6
+          .form-group
+            = f.input :name, label: 'Tên', input_html: { class: 'form-control'}
+        .col-md-6
+          .form-group
+            = f.input :lowest_price, label: 'Giá chỉ từ', as: :numeric, input_html: { class: 'form-control'}
+    .col-md-6
+      .row
+        .col-md-6
+          .form-group
+            .image-border
+              .image-border-content
+                .parent
+                  .image-content.image-media-preview
+                    - if f.object.image.present?
+                      = image_tag( url_for(f.object.image), class: "img-fluid", width: 200)
+                    - else
+                      .font-awesome-image
+                        %i.far.fa-image
+                %label.btn.btn-light.btn-sm{:style => "width: 100%;"}
+                  Add a image!
+                  %span{:style => "display:none;"}
+                    = f.input :image, label: 'Hình ảnh', as: :file, input_html: { class:"attach_image"}
+        .col-md-6
+          .form-group
+            .image-border
+              .image-border-content
+                .parent
+                  .image-content.image-media-preview
+                    - if f.object.thumbnail_image.present?
+                      = image_tag( url_for(f.object.thumb_ithumbnail_imagemage), class: "img-fluid", width: 200)
+                    - else
+                      .font-awesome-image
+                        %i.far.fa-image
+                %label.btn.btn-light.btn-sm{:style => "width: 100%;"}
+                  Add a image!
+                  %span{:style => "display:none;"}
+                    = f.input :thumbnail_image, label: 'Hình mẫu thu nhỏ', as: :file, input_html: { class:"attach_image"}
+    .clearfix
+
+    .col-xs-12
+      = f.submit "Save", class: "btn btn-primary"

@@ -42,13 +42,15 @@ class Admins::ProductsController < Admins::AdminsController
   end
 
   private
-    def set_admins_product
-      @admins_product = Product.find_by(id: params[:id])
-    end
 
-    def admins_product_params
-      car_model = CarModel.find_by(name: params[:product][:car_model_id])
-      params[:product][:car_model_id] = car_model&.id
-      params.require(:product).permit!
-    end
+  def set_admins_product
+    @admins_product = Product.find_by(id: params[:id])
+  end
+
+  def admins_product_params
+    car_model = CarModel.find_by(name: params[:product][:car_model_id])
+    params[:product][:car_model_id] = car_model&.id
+    params.require(:product).permit!
+  end
+
 end
