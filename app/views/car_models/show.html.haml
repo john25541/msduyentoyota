@@ -1,4 +1,28 @@
-- @car_models.each do |model|
-  %h1= model.name
-  - if model.image.present?
-    = image_tag(model.image)
+= render 'layouts/products/breadcumb'
+%section.latest_collection_area.p_100
+  .container
+    .flag_title
+      %h2.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+        = image_tag("icon/flag-2.png")
+        = @car_model.name
+    .row.l_collection_inner
+      - @car_model.products.each do |product|
+        .col-lg-4.col-md-6
+          .l_collection_item.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+            .car_img
+              %a{:href => "/products/#{product&.slug}"}
+                = image_tag(url_for(product.attachments.first&.image), class: "img-fluid")
+            .text_body
+              %a{:href => "/products/#{product&.slug}"}
+                %h4= product.name
+              %h5= "Giá: #{number_to_currency(product.price, precision: 0, unit: '')} VND"
+            .text_footer
+              %a
+                %i.icon-engine
+                2500
+              %a
+                %i.icon-gear1
+                Manual
+              %a
+                %i.icon-oil>
+                20/24

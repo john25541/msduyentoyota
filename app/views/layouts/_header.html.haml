@@ -41,7 +41,7 @@
               %ul.dropdown-menu
                 - @car_models.each do |model|
                   %li
-                    %a{href: "/products/#{Product&.first&.slug}"}
+                    %a{href: "/car_models/#{model.slug}"}
                       = image_tag (model.image.blob.service_url)
                       = model.name
             %li.dropdown.submenu{class: is_active?("Services")}
