@@ -12,7 +12,7 @@
         %table.table.table-bordered
           %thead
             %tr
-              %th ID
+              %th STT
               %th Tên
               %th Giá
               %th Năm Sản xuất
@@ -29,11 +29,11 @@
               %th
               %th
           %tbody
-            - @admins_products.each do |product|
+            - @admins_products.each_with_index do |product, index|
               %tr
-                %td= product.id
+                %td= index + 1
                 %td= product.name
-                %td= product.price
+                %td="#{number_to_currency(product.price, precision: 0, unit: '')} VND"
                 %td= product.year
                 %td= product.transmission
                 %td= product.cylinder_capacity

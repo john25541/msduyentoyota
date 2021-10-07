@@ -27,7 +27,7 @@
                 %td= car_model.id
                 %td= car_model.name
                 %td= car_model.slug
-                %td= car_model.lowest_price
+                %td= "#{number_to_currency(car_model.lowest_price, precision: 0, unit: '')} VND"
                 %td
                   - if car_model.image.present?
                     = image_tag(car_model.image&.blob&.service_url, class: "img-fluid", width: 200)

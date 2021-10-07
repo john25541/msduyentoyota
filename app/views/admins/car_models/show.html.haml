@@ -23,7 +23,7 @@
             %td= @admins_car_model.slug
           %tr
             %th Giá chỉ từ
-            %td= @admins_car_model.lowest_price
+            %td="#{number_to_currency(@admins_car_model.lowest_price, precision: 0, unit: '')} VND"
           %tr
             %th Hình ảnh
             %td

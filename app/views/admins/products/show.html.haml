@@ -26,7 +26,7 @@
             %td= @admins_product.slug
           %tr
             %th Giá
-            %td= @admins_product.price
+            %td= "#{number_to_currency(@admins_product.price, precision: 0, unit: '')} VND"
           %tr
             %th Năm Sản xuất
             %td= @admins_product.year
