@@ -5,7 +5,7 @@
     - if params[:action] == 'developer'
       %title I'm a programer
     - else
-      %title Toyota Gò Vấp
+      %title Toyota Gò Vấp | Toyota Đông Sài Gòn
     %meta{:content => "width=device-width,initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %link{rel:"icon", href:"/assets/favicon.png?v=2", type: "image/png"}
     = csrf_meta_tags
@@ -14,12 +14,13 @@
     %meta{ property: 'og:image:secure_url', content: image_url('/assets/blog/su-nghiep-lap-trinh-vien') }
     %meta{ property: 'og:image:width', content: '272' }
     %meta{ property: 'og:image:height', content: '66' }
-    = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'
-    - if params[:action] == 'developer'
-      = stylesheet_link_tag 'introduce', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload'
 
-    = javascript_pack_tag 'application','data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'home'
+
+    - if params[:action] == 'developer'
+      = stylesheet_link_tag 'introduce'
+    = javascript_pack_tag 'application'
 
   %body{"data-scroll-animation" => 'true'}
     .preloader

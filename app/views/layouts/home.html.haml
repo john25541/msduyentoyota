@@ -2,17 +2,17 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title Toyota Gò Vấp
+    %title Toyota Gò Vấp | Toyota Đông Sài Gòn
     %meta{:content => "width=device-width,initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %link{rel:"icon", href:"/assets/favicon.png?v=2", type: "image/png"}
     = csrf_meta_tags
     = csp_meta_tag
 
-    = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'home'
 
-    = javascript_pack_tag 'application','data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'home' , 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application'
+    = javascript_pack_tag 'home'
 
   %body{"data-scroll-animation" => 'true'}
     .preloader

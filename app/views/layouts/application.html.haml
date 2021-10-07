@@ -2,21 +2,22 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title Toyota
+    %title Toyota Gò Vấp | Toyota Đông Sài Gòn
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
     %link{rel:"icon", href:"/assets/favicon.png?v=2", type: "image/png"}
 
     = csrf_meta_tags
     = csp_meta_tag
 
-    = stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload', defer: true
-    = stylesheet_link_tag 'home', 'data-turbolinks-track': 'reload', defer: true
-    = stylesheet_link_tag 'admins', 'data-turbolinks-track': 'reload', defer: true
-
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true
-    = javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'home'
     - if params[:controller].split("/").first == 'admins'
-      = javascript_pack_tag 'admins', 'data-turbolinks-track': 'reload', defer: true
+      = stylesheet_link_tag 'admins'
+
+    = javascript_pack_tag 'application'
+    = javascript_pack_tag 'home'
+    - if params[:controller].split("/").first == 'admins'
+      = javascript_pack_tag 'admins'
   %body{"data-scroll-animation" => 'true', class: body_class}
     .preloader
       .main-loader
@@ -28,6 +29,7 @@
       .container
         = render 'admins/shared/nav'
     = yield
+    = render 'layouts/news'
     = render 'layouts/facebook_chat'
     = render 'layouts/hotline'
     = render 'layouts/footer'
