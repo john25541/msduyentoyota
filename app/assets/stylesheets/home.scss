@@ -1,4 +1,46 @@
 /*
-  *= require 'template/style' 
+  *= require 'template/style'
   *= require reponsive
 */
+
+$baseColor: #ff2a39;
+$pfont: #777777;
+
+
+
+.pagination {
+  a:hover, a.active{
+    background: $baseColor !important;
+    color: white;
+  }
+
+  cursor: default;
+  /* self-clearing method: */ }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.5em 1.1em;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    text-decoration: none;
+    color: $pfont;
+    border: 1px solid #dddddd;
+  }
+
+  .pagination .disabled {
+    color: #999999;
+  }
+
+  .pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: $baseColor;
+    color: white;
+  }
+
+  * html .pagination {
+    height: 1%;
+  }
+
+  *:first-child + html .digg_pagination {
+    overflow: hidden;
+}

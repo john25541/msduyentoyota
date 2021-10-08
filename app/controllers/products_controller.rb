@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
+
   def index
-    @products = Product.all
-    
+    @products = Product.paginate(page: params[:page], per_page: 12)
   end
+
   def show
     @product = Product.find_by_slug(params[:slug])
     @contact = Contact.new

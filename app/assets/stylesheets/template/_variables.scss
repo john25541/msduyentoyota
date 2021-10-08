@@ -5,15 +5,15 @@ $bar: 'Barlow', sans-serif;
 
 
 /*Color Variables*/
-$baseColor: #ff2a39; 
-$red2: #ea2626; 
-$green: #0cc533; 
+$baseColor: #ff2a39;
+$red2: #ea2626;
+$green: #0cc533;
 $pest: #153e4d;
 $per: #ff575d;
 $or: #f75d34;
 $yellow: #fecc18;
 $dip: #34373b;
-$pfont: #777777; 
+$pfont: #777777;
 
 
 /*=================== fonts ====================*/
@@ -21,7 +21,7 @@ $pfont: #777777;
 
 // Mixins
 @mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
-    transition: $property $duration $animate $delay; 
+    transition: $property $duration $animate $delay;
 }
 
 // Placeholder Mixins
