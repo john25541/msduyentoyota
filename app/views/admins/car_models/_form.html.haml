@@ -28,21 +28,6 @@
                   Add a image!
                   %span{:style => "display:none;"}
                     = f.input :image, label: 'Hình ảnh', as: :file, input_html: { class:"attach_image"}
-        .col-md-6
-          .form-group
-            .image-border
-              .image-border-content
-                .parent
-                  .image-content.image-media-preview
-                    - if f.object.thumbnail_image.present?
-                      = image_tag( url_for(f.object.thumb_ithumbnail_imagemage), class: "img-fluid", width: 200)
-                    - else
-                      .font-awesome-image
-                        %i.far.fa-image
-                %label.btn.btn-light.btn-sm{:style => "width: 100%;"}
-                  Add a thumbnail image!
-                  %span{:style => "display:none;"}
-                    = f.input :thumbnail_image, label: 'Hình mẫu thu nhỏ', as: :file, input_html: { class:"attach_image"}
     .clearfix
 
     .col-xs-12

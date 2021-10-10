@@ -29,8 +29,3 @@
             %td
               - if @admins_car_model.image.present?
                 = image_tag(@admins_car_model.image&.blob&.service_url, class: "img-fluid", width: 200)
-          %tr
-            %th Hình mẫu thu nhỏ
-            %td
-              - if @admins_car_model.thumbnail_image.present?
-                = image_tag(@admins_car_model.thumbnail_image&.blob&.service_url, class: "img-fluid", width: 200)
