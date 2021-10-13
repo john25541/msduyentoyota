@@ -15,5 +15,9 @@ test:
   database: msduyentoyota_test
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  host: 127.0.0.1
+  username: postgres
+  password: 123QWEasd
   database: msduyentoyota
