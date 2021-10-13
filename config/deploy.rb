@@ -4,12 +4,12 @@ lock "~> 3.16.0"
 set :application, "msduyentoyota"
 set :repo_url, "git@github.com:john25541/msduyentoyota.git"
 
-set :deploy_to, "/home/deploy/#{fetch :application}"
+set :deploy_to, "/home/root/#{fetch :application}"
 
 set :branch, :Master
 
 
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle',
 'public/system', 'public/uploads'
 
 set :keep_releases, 5
