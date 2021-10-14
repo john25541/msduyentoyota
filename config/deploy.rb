@@ -4,7 +4,7 @@ lock "~> 3.16.0"
 set :application, "msduyentoyota"
 set :repo_url, "git@github.com:john25541/msduyentoyota.git"
 
-set :deploy_to, "/home/root/#{fetch :application}"
+set :deploy_to, "/home/deploy/#{fetch :application}"
 
 set :branch, :Master
 
