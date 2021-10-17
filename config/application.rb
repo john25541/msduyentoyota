@@ -21,7 +21,7 @@ module Msduyentoyota
     config.assets.configure do |env|
       env.export_concurrent = false
     end
-    
+
     config.time_zone = "Hanoi"
     # config.eager_load_paths << Rails.root.join("extras")
   end
