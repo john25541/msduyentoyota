@@ -6,6 +6,68 @@
 $baseColor: #ff2a39;
 $pfont: #777777;
 
+.covert_size {
+  height: 580px;
+}
+
+@media (max-width:1199px) {
+  .main_slider.budget_slider {
+    height: 440px;
+  }
+  .covert_size {
+    height: 430px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main_slider.budget_slider {
+    height: 440px;
+  }
+  .covert_size {
+    height: 430px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main_slider.budget_slider {
+    height: 440px;
+  }
+  .covert_size {
+    height: 390px;
+    top: 47px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_slider.budget_slider {
+    height: 350px;
+  }
+  .covert_size {
+    height: 315px;
+    top: 47px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main_slider.budget_slider {
+    height: 210px;
+  }
+  .covert_size {
+    height: 200px;
+    top: 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  .main_slider.budget_slider {
+    height: 150px;
+  }
+  .covert_size {
+    height: 150px;
+    top: 0px;
+  }
+}
+
 .pagination {
   a:hover, a.active{
     background: $baseColor !important;

@@ -3036,9 +3036,9 @@ __webpack_require__(/*! channels/jquery.waypoints.min.js */ "./app/javascript/ch
 
   var nav_offset_top = $('header').height() + 50;
   /*-------------------------------------------------------------------------------
-  Navbar 
+  Navbar
   -------------------------------------------------------------------------------*/
-  //* Navbar Fixed  
+  //* Navbar Fixed
 
   function navbarFixed() {
     if ($('.header_area').length) {
@@ -3207,17 +3207,7 @@ __webpack_require__(/*! channels/jquery.waypoints.min.js */ "./app/javascript/ch
     prevArrow: ".arrow_left",
     nextArrow: ".arrow_right",
     draggable: true
-  }); // resize banner fix Cannot read property 'add' of null --- slick
-
-  var fullHeight = function fullHeight() {
-    $('.js-fullheight').css('height', $(window).height() - 100);
-    $(window).resize(function () {
-      $('.js-fullheight').css('height', $(window).height() - 100);
-    });
-  }; ////----------------------------
-
-
-  fullHeight();
+  });
 
   function doAnimations(elements) {
     var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -22994,4 +22984,4 @@ module.exports = function (module) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=theme-dist-c5406cb193a7fc457024.js.map
+//# sourceMappingURL=theme-dist-fc594981f6de0a51baa2.js.map

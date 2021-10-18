@@ -176,7 +176,7 @@
 		}
 	}
 	&.budget_slider{
-		height: 780px;
+		height: 580px;
 		.slider_item{
 			.image_overlay{data-slick
 				&:before{
@@ -187,6 +187,7 @@
 					top: 0px;
 					height: 100%;
 					width: 100%;
+					background-size: cover !important;
 				}
 			}
 			.slider_text{

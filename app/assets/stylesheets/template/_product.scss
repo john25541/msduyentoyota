@@ -433,7 +433,6 @@
 	box-shadow: 0px 2px 4px 0px rgba(0, 121, 175, 0.08);
 	@include transition;
 	.car_img{
-		padding-top: 50px;
 		overflow: hidden;
 		position: relative;
 		z-index: 2;
@@ -1791,6 +1790,9 @@
 			left: 60%;
 			transform: translateX(-50%);
 		}
+	}
+	.l_collection_item .car_img{
+		padding-top: 50px;
 	}
 }
 

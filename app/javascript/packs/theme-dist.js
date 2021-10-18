@@ -218,17 +218,6 @@ require("channels/jquery.waypoints.min.js");
         draggable: true,
     });
 
-    // resize banner fix Cannot read property 'add' of null --- slick
-    var fullHeight = function() {
-        $('.js-fullheight').css('height', $(window).height() - 100);
-
-        $(window).resize(function() {
-            $('.js-fullheight').css('height', $(window).height() - 100);
-        });
-    };
-    ////----------------------------
-    fullHeight();
-
     function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         elements.each(function() {
