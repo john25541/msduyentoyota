@@ -1251,7 +1251,7 @@
     position: absolute;
     content: "\f00c";
     border-radius: 100%;
-    top: 1px; 
+    top: 1px;
     left: 1.5px;
     margin: auto;
     transition: background 0.25s linear;
@@ -1264,10 +1264,10 @@
 .creat_account input[type=checkbox]:checked ~ .check::before{
     opacity: 1;
 }
-//.creat_account input[type=checkbox]:checked ~ .check{
-//    background: $baseColor;
-//	border-color: $baseColor;
-//}
+.creat_account input[type=checkbox]:checked ~ .check{
+   	background: $baseColor;
+	border-color: $baseColor;
+}
 
 .order_box_price{
 	.payment_list{
