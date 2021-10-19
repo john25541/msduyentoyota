@@ -12,26 +12,22 @@
     = stylesheet_link_tag 'application'
     = stylesheet_link_tag 'home'
 
-    - if params[:controller] == 'devise/sessions'
-      = stylesheet_link_tag 'admins'
     = javascript_pack_tag 'application'
     = javascript_pack_tag 'home'
-    - if params[:controller] == 'devise/sessions'
-      = javascript_pack_tag 'admins'
   %body{"data-scroll-animation" => 'true', class: body_class}
     .preloader
       .main-loader
         %span.loader1
         %span.loader2
         %span.loader3
-    = render 'layouts/header' unless body_class.include?('admins')
+    = render 'layouts/header' unless body_class.include?('admins') || body_class.include?('devise_sessions')
     - if body_class.include?('admins')
       .container
         = render 'admins/shared/nav'
     = yield
     - unless body_class.include?('admins') || body_class.include?('devise_sessions')
       = render 'layouts/news'
-    = render 'layouts/facebook_chat'
-    = render 'layouts/hotline'
-    = render 'layouts/footer'
+      = render 'layouts/facebook_chat'
+      = render 'layouts/hotline'
+    = render 'layouts/footer' unless body_class.include?('devise_sessions')
   = javascript_pack_tag 'theme-dist', defer: true

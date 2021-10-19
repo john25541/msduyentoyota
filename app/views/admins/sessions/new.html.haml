@@ -1,26 +1,31 @@
-.limiter
-  .container-login100
-    .wrap-login100
-      .login100-form-title{:style => "background-image: url(/assets/background/bg-signin.jpg);"}
-        %span.login100-form-title-1
-          Đăng nhập
-      = form_for(resource, as: resource_name, html: {class: 'login100-form'}, url: session_path(resource_name)) do |f|
-        .wrap-input100.m-b-26{"data-validate" => "Username is required"}
-          %span.label-input100 Email
-          = f.email_field :email, class: 'input100', :placeholder => "Enter email", autocomplete: "email"
-          %span.focus-input100
-        .wrap-input100.m-b-18{"data-validate" => "Password is required"}
-          %span.label-input100 Password
-          = f.password_field :password, class: 'input100', :placeholder => "Enter password", autocomplete: "current-password"
-          %span.focus-input100
-        - if devise_mapping.rememberable?
-          .flex-sb-m.w-full.p-b-30
-            = f.check_box :remember_me, id: 'ckb1', class: 'input-checkbox100'
-            %label.label-checkbox100{:for => "ckb1"}
-              Remember me
-        .container-login100-form-btn
-          .form-group{style:"color:red;"}
-            = flash.alert
-        .container-login100-form-btn
-          %button.login100-form-btn
-            Login
+%section.create_account_area.p_100
+  .container
+    .flag_center_title.wow.fadeInUp.animated{"data-wow-delay" => "0.2s", :style => "visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"}
+      %h2
+        %img{:alt => "", :src => "/assets/icon/flag-2.png"}>
+        Admin Đăng Nhập
+    .create_account_box
+      -# %h6 Login with social network
+      .social_singup
+        %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'}
+          %i.fab.fa-google-plus
+        %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'}
+          %i.fab.fa-facebook
+        %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'}
+          %i.fab.fa-twitter
+      .or
+        %p or
+      .form-group{style:"color:red;"}
+        = flash.alert
+      = form_for(resource, as: resource_name, html: {class: 'row contact_form', id: 'contactForm'}, url: session_path(resource_name)) do |f|
+        .form-group.col-md-12
+          = f.email_field :email, class: 'form-control', placeholder: "Email", autocomplete: "email"
+        .form-group.col-md-12
+          = f.password_field :password, class: 'form-control', placeholder: "Password", autocomplete: "current-password"
+          - if devise_mapping.rememberable?
+            .creat_account
+              = f.check_box :remember_me, id: 'p-option-1'
+              %label{for: "p-option-1"} Nhớ mật khẩu?
+              .check
+        .form-group.col-md-12
+          %button.btn.submit_btn.red.form-control{type: "submit", value: "submit"} Đăng nhập

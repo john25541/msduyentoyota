@@ -3,19 +3,20 @@
     .col-xs-3{ style: "height: 1em;" }
     .col-xs-6{ style: "height: 1em;" }
     .col-xs-3
-      %p Welcome admin!
+      %p Chào mừng quản trị viên!
       %p
-        Signed in as
+        Đăng nhập với tư cách là:
+
         %span{ style: "font-weight: bold;" }= current_admin.email
       %p{ style: "font-style: italic;" }
-        = link_to "Sign Out", destroy_admin_session_path, method: :delete, id: "sign-out-btn"
+        = link_to "Đăng xuất", destroy_admin_session_path, method: :delete, id: "sign-out-btn"
   .row{ style: "margin-bottom:1em;" }
     %ul#myTab.nav.nav-tabs{:role => "tablist"}
       %li.nav-item
         = link_to 'Dashboard', admins_path, { class: "nav-link  #{ params[:controller].include?("dashboard") ? "active" : "" }" }
       %li.nav-item
-        = link_to 'Products', admins_products_path, { class: "nav-link  #{ params[:controller].include?("products") ? "active" : "" }" }
+        = link_to 'Sản phẩm', admins_products_path, { class: "nav-link  #{ params[:controller].include?("products") ? "active" : "" }" }
       %li.nav-item
-        = link_to 'Car models', admins_car_models_path, { class: "nav-link  #{ params[:controller].include?("car_models") ? "active" : "" }" }
+        = link_to 'Mẫu xe', admins_car_models_path, { class: "nav-link  #{ params[:controller].include?("car_models") ? "active" : "" }" }
       %li.nav-item
-        = link_to 'Contacts', admins_contacts_path, { class: "nav-link  #{ params[:controller].include?("contacts") ? "active" : "" }" }
+        = link_to 'Liên hệ', admins_contacts_path, { class: "nav-link  #{ params[:controller].include?("contacts") ? "active" : "" }" }
