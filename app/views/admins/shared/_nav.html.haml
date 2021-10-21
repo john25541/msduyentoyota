@@ -1,4 +1,4 @@
-%section.p_100
+%section
   .row{ style: "margin-top:2em; margin-bottom:1em;" }
     .col-xs-3{ style: "height: 1em;" }
     .col-xs-6{ style: "height: 1em;" }
@@ -20,3 +20,5 @@
         = link_to 'Mẫu xe', admins_car_models_path, { class: "nav-link  #{ params[:controller].include?("car_models") ? "active" : "" }" }
       %li.nav-item
         = link_to 'Liên hệ', admins_contacts_path, { class: "nav-link  #{ params[:controller].include?("contacts") ? "active" : "" }" }
+      %li.nav-item
+        = link_to 'Bài viết', admins_posts_path, { class: "nav-link  #{ params[:controller].include?("posts") ? "active" : "" }" }
