@@ -11,7 +11,7 @@ class Admins::PostsController < Admins::AdminsController
 
 	def create
     @admins_post = Post.new(admins_post_params)
-    binding.pry
+
     respond_to do |format|
       if @admins_post.save
         format.html { redirect_to admins_post_path(@admins_post), notice: 'Bài đăng đã được tạo thành công' }
