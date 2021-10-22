@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7dMvaKv9C82MdD49fhUqPOP9uazYu1cOznQ&usqp=CAU" rel="icon" type="image/png"></link>
+
+  <!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    #notfound {
+      position: relative;
+      height: 100vh;
+    }
+
+    #notfound .notfound {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+    .notfound {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .notfound .notfound-404 {
+      height: 280px;
+      position: relative;
+      z-index: -1;
+    }
+
+    .notfound .notfound-404 h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 230px;
+      margin: 0px;
+      font-weight: 900;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      background: url('/assets/bg-404.jpg') no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    .notfound h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .notfound p {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    .notfound a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #0046d5;
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 40px;
+      color: #fff;
+      font-weight: 700;
+      -webkit-box-shadow: 0px 4px 15px -5px #0046d5;
+              box-shadow: 0px 4px 15px -5px #0046d5;
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        .notfound .notfound-404 {
+          height: 142px;
+        }
+        .notfound .notfound-404 h1 {
+          font-size: 112px;
+        }
+    }
+
+    .countup .timeel {
+        font-size: 42px;
+        font-weight: 800;
+        margin-right: 3px;
+    }
+
+    .count-text {
+        font-size: 22px;
+        font-weight: 700;
+        margin-right: 20px;
+    }
+
+    @media (max-width: 767.98px) {
+        .countup .timeel {
+            font-size: 18px;
+            font-weight: 800;
+        }
+        .count-text {
+            font-size: 14px;
+            font-weight: 400;
+            margin-right: 10px;
+        }
+    }
+
+    @media (min-width: 575.98px) and (max-width: 767.98px) {
+        .min-max-h-auto {
+            height: auto !important;
+        }
+        .coming-soon {
+            padding: 80px 0;
+        }
+    }
+  </style>
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>Oops!</h1>
+			</div>
+			<h2>Coming soom</h2>
+      <div class="countup my-30 text-center d-table mx-auto md-my-15" id="countup1">
+        <span class="timeel days">00</span>
+        <span class="count-text timeRefDays">days</span>
+        <span class="timeel hours">00</span>
+        <span class="count-text timeRefHours">hours</span>
+        <span class="timeel minutes">00</span>
+        <span class="count-text timeRefMinutes">minutes</span>
+        <span class="timeel seconds">00</span>
+        <span class="count-text timeRefSeconds">seconds</span>
+      </div>
+			<p >Rất tiếc vì sự bất tiện này, Website đang được bảo trì để nâng cấp, Chúng tôi sẽ đưa trang hoạt động trở lại nhanh nhất có thể.</p>
+			<a href="https://www.facebook.com/locmiclabs/" target="_blank">Liên hệ nhà phát triển</a>
+		</div>
+	</div>
+
+  <script>
+    window.onload = function() {
+        // Month Day, Year Hour:Minute:Second, id-of-element-container
+        countUpFromTime("Oct 22, 2021 12:00:00", 'countup1'); // ****** Change this line!
+    };
+
+    function countUpFromTime(countFrom, id) {
+        countFrom = new Date(countFrom).getTime();
+        var now = new Date(),
+            countFrom = new Date(countFrom),
+            timeDifference = (now - countFrom);
+
+        var secondsInADay = 60 * 60 * 1000 * 24,
+            secondsInAHour = 60 * 60 * 1000;
+
+        days = Math.floor(timeDifference / (secondsInADay) * 1);
+        hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+        mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+        secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+        var idEl = document.getElementById(id);
+        idEl.getElementsByClassName('days')[0].innerHTML = days;
+        idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+        idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+        idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+        clearTimeout(countUpFromTime.interval);
+        countUpFromTime.interval = setTimeout(function() {
+            countUpFromTime(countFrom, id);
+        }, 1000);
+    }
+  </script>
+</body>
+</html>

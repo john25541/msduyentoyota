@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::Base
+  before_action :render_404
   before_action :set_car_model
 
   protected
+
+  def render_404
+    render :file => "#{Rails.root}/public/maintenance.html", :layout => false, :status => :not_found
+  end
 
   def set_car_model
     @car_models = CarModel.all

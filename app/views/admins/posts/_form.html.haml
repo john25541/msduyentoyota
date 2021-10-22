@@ -1,0 +1,30 @@
+= simple_form_for @admins_post, url: url do |f|
+  .row
+    .col-md-4
+      .form-group
+        = f.input :title, label: 'Tiêu đề', input_html: { class: 'form-control'}
+    .col-md-4
+      .form-group
+        = f.input :slug, label: 'slug', input_html: { class: 'form-control'}
+    .col-md-4
+      .form-group
+        .image-border
+          .image-border-content
+            .parent
+              .image-content.image-media-preview
+                - if f.object.background.present?
+                  = image_tag( url_for(f.object.background), class: "img-fluid", width: 200)
+                - else
+                  .font-awesome-image
+                    %i.far.fa-image
+            %label.btn.btn-light.btn-sm{:style => "width: 100%;"}
+              Add a image!
+              %span{:style => "display:none;"}
+                = f.input :background, label: 'Background', as: :file, input_html: { class:"attach_image"}
+    .col-md-12
+      .form-group
+        = f.input :body, label: 'Nội dung', as: :text, input_html: { class: 'form-control', rows: 10}
+    .clearfix
+    .col-xs-12
+      .form-group
+      = f.submit "Lưu lại", class: "btn btn-primary"

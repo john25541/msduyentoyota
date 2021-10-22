@@ -1,0 +1,30 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  %p
+    = link_to 'Quay lại', admins_posts_path
+    |
+    = link_to 'Sửa', edit_admins_post_path
+    .row
+      .table-responsive
+        %table.table.table-bordered
+          %tr
+            %th ID
+            %td= @admins_post.id
+          %tr
+            %th Tiêu đề
+            %td= @admins_post.title
+          %tr
+            %th slug
+            %td= @admins_post.slug
+          %tr
+            %th Background
+            %td
+              - if @admins_post.background.present?
+                = image_tag( url_for(@admins_post.background), class: "img-fluid", width: 200)
+          %tr
+            %th Nội dung
+            %td= simple_format @admins_post.body

@@ -9,10 +9,8 @@ Rails.application.routes.draw do
     resources :products
     resources :car_models
     resources :contacts
+    resources :posts
   end
-
-  get 'introduces/about_us', to: 'introduce#about_us'
-  get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 
   resources :car_models, only: [:show] do
     get '/:slug', on: :collection, to: 'car_models#show'
@@ -23,6 +21,12 @@ Rails.application.routes.draw do
   end
 
   resources :contacts, only: [:index, :create]
+
+  get 'tin-tuc/:slug', to: 'posts#show', as: :post
+  get 'tin-tuc', to: 'posts#index', as: :posts
+
+  get 'introduces/about_us', to: 'introduce#about_us'
+  get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 
   root 'home#index'
 end

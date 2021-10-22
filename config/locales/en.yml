@@ -1,6 +1,6 @@
-en:  
+en:
   activerecord:
-    models: 
+    models:
       contact: "Contact"
     attributes:
       contact:
@@ -19,4 +19,3 @@ en:
               not_a_number: "*Số điện thoại không hợp lệ !"
             message:
               blank: "*Không thể bỏ trống !"
-        

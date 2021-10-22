@@ -1,0 +1,35 @@
+.container
+  - flash.each do |key, value|
+    .alert.alert-warning.alert-dismissible.fade.show{:role => "alert"}
+      %strong= value
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+  .row
+    .col-xs-12
+      = link_to 'Tạo bài viết mới', new_admins_post_path, class: 'btn btn-success btn-sm'
+      %h1 Tất cả bài viết
+      .table-responsive
+        %table.table.table-bordered
+          %thead
+            %tr
+              %th STT
+              %th Tiêu đề
+              %th Slug
+              %th Background
+              %th
+              %th
+              %th
+              %th
+          %tbody
+            - @admins_posts.each_with_index do |post, index|
+              %tr
+                %td= index + 1
+                %td= post.title
+                %td= post.slug
+                %td
+                  - if post.background.present?
+                    = image_tag( url_for(post.background), class: "img-fluid", width: 200 )
+                %td= link_to 'Preview', post_path(post.slug), target: :_blank
+                %td= link_to 'Xem', admins_post_path(post)
+                %td= link_to 'Sửa' , edit_admins_post_path(post)
+                %td= link_to 'Xoá', admins_post_path(post) , method: :delete, data: { confirm: "Bạn có chắc, bạn muốn xoá bài viết này?" }

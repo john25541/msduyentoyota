@@ -1,5 +1,5 @@
 %p= "Tên: #{@contact.name}"
 %p= "Số điện Thoại: #{@contact.phone_number}"
 %p= "Xe ôtô: #{@contact.product}"
-%p= "Messages: #{@contact.message}"
+%p= "Messages: #{simple_format(@contact.message)}"
 %p= "Email: #{@contact.email}"
