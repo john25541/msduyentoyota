@@ -1,11 +1,15 @@
 class ApplicationController < ActionController::Base
-  before_action :render_404
+  before_action :render_maintenance
   before_action :set_car_model
+
+  TIME_MAINTENANCE = "Oct 31, 2021 12:00:00"
 
   protected
 
-  def render_404
-    render :file => "#{Rails.root}/public/maintenance.html", :layout => false
+  def render_maintenance
+    if Time.current < TIME_MAINTENANCE.to_time
+      render :file => "#{Rails.root}/public/maintenance.html", :layout => false and return
+    end
   end
 
   def set_car_model

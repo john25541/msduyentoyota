@@ -159,25 +159,28 @@
         <span class="timeel seconds">00</span>
         <span class="count-text timeRefSeconds">seconds</span>
       </div>
-			<p >Rất tiếc vì sự bất tiện này, Website đang được bảo trì để nâng cấp các tính năng và giao diện. Chúng tôi sẽ đưa trang hoạt động trở lại sớm nhất!</p>
+			<p >Rất tiếc vì sự bất tiện này, Website đang được bảo trì để nâng cấp các tính năng và giao diện Chúng tôi sẽ đưa trang hoạt động trở lại sớm nhất!</p>
 			<a href="https://www.facebook.com/locmiclabs/" target="_blank">Liên hệ nhà phát triển</a>
 		</div>
 	</div>
 
   <script>
     window.onload = function() {
-        // Month Day, Year Hour:Minute:Second, id-of-element-container
-        countDownFromTime("Oct 31, 2021 12:00:00", 'countdown_time'); // ****** Change this line!
+      // Month Day, Year Hour:Minute:Second, id-of-element-container
+      countDownFromTime("Oct 31, 2021 12:00:00", 'countdown_time'); // ****** Change this line!
     };
 
     function countDownFromTime(countFrom, id) {
-        countFrom = new Date(countFrom).getTime();
-        var now = new Date(),
-            countFrom = new Date(countFrom),
-            timeDifference = (countFrom - now);
-
+      countFrom = new Date(countFrom).getTime();
+      var now = new Date(),
+        countFrom = new Date(countFrom),
+        timeDifference = (countFrom - now);
+      console.log(countFrom)
+      if (timeDifference <= 0) {
+        window.location.href = "/";
+      } else {
         var secondsInADay = 60 * 60 * 1000 * 24,
-            secondsInAHour = 60 * 60 * 1000;
+          secondsInAHour = 60 * 60 * 1000;
 
         days = Math.floor(timeDifference / (secondsInADay) * 1);
         hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
@@ -194,6 +197,7 @@
         countDownFromTime.interval = setTimeout(function() {
           countDownFromTime(countFrom, id);
         }, 1000);
+      }
     }
   </script>
 </body>
