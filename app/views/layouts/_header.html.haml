@@ -75,8 +75,8 @@
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{href: "#{post_path(Post.first&.slug)}"} The First Article
+                  %a{href: "/tin-tuc"} Tất cả bài viết
                 %li
-                  %a{href: "#{post_path(Post.first&.slug)}"} Blog details
+                  %a{href: "#{post_path(Post.first&.slug)}"} The First Article
             %li{class: is_active?("contacts")}
               = link_to 'LIÊN HỆ', contacts_path
