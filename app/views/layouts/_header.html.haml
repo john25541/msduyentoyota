@@ -49,36 +49,34 @@
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{:href => "service-1.html"} Service 01
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 01
                 %li
-                  %a{:href => "service-2.html"} Service 02
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 02
                 %li
-                  %a{:href => "service-3.html"} Service 03
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 03
                 %li
-                  %a{:href => "service-details.html"} Service Details
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service Details
             %li.dropdown.submenu{class: is_active?("advisorys")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} TƯ VẤN
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{:href => "shop.html"} Shop
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Shop
                 %li
-                  %a{:href => "shop-list.html"} Shop List
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Shop List
                 %li
                   %a{:href => "/products/#{Product&.first&.slug}"} Product Details
                 %li
-                  %a{:href => "cart.html"} Cart
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Cart
                 %li
-                  %a{:href => "checkout.html"} Checkout
+                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Checkout
             %li.dropdown.submenu{class: is_active?("news")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Tin tức
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{:href => "blog.html"} Blog List
+                  %a{href: "#{post_path(Post.first&.slug)}"} The First Article
                 %li
-                  %a{:href => "blog-grid.html"} Blog Grid
-                %li
-                  %a{:href => "single-blog.html"} Blog details
+                  %a{href: "#{post_path(Post.first&.slug)}"} Blog details
             %li{class: is_active?("contacts")}
               = link_to 'LIÊN HỆ', contacts_path
