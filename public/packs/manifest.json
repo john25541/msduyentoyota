@@ -28,14 +28,6 @@
         "/packs/js/home-a5c0d5db8b56c2405520.js.map"
       ]
     },
-    "introduce": {
-      "js": [
-        "/packs/js/introduce-be89a06c30de97e22631.js"
-      ],
-      "js.map": [
-        "/packs/js/introduce-be89a06c30de97e22631.js.map"
-      ]
-    },
     "theme-dist": {
       "js": [
         "/packs/js/theme-dist-fc594981f6de0a51baa2.js"
@@ -47,8 +39,6 @@
   },
   "home.js": "/packs/js/home-a5c0d5db8b56c2405520.js",
   "home.js.map": "/packs/js/home-a5c0d5db8b56c2405520.js.map",
-  "introduce.js": "/packs/js/introduce-be89a06c30de97e22631.js",
-  "introduce.js.map": "/packs/js/introduce-be89a06c30de97e22631.js.map",
   "theme-dist.js": "/packs/js/theme-dist-fc594981f6de0a51baa2.js",
   "theme-dist.js.map": "/packs/js/theme-dist-fc594981f6de0a51baa2.js.map"
 }
