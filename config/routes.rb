@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   get 'tin-tuc', to: 'posts#index', as: :posts
 
   get 'introduces/about_us', to: 'introduce#about_us'
-  get 'introduces/super_handsome_developer', to: 'introduce#developer', as: :introduces_developer
 
   root 'home#index'
 end
