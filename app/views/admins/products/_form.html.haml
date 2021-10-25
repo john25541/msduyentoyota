@@ -18,13 +18,6 @@
       .row
         .col-md-6
           .form-group
-            = f.input :year, label: 'Năm sản Xuất', as: :numeric , input_html: { class: 'form-control'}
-        .col-md-6
-          .form-group
-            = f.input :transmission, label: 'Hộp số', input_html: { class: 'form-control'}
-      .row
-        .col-md-6
-          .form-group
             = f.input :body_type, label: 'Kiểu dáng xe', input_html: { class: 'form-control'}
         .col-md-6
           .form-group
@@ -43,6 +36,10 @@
         .col-md-6
           .form-group
             = f.input :fuel, label: 'Nhiên liệu', input_html: { class: 'form-control'}
+      .row
+        .col-md-6
+          .form-group
+            = f.input :transmission, label: 'Hộp số', input_html: { class: 'form-control'}
     .col-md-6
       .row
         .form-group
