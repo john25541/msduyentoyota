@@ -30,15 +30,15 @@
     },
     "theme-dist": {
       "js": [
-        "/packs/js/theme-dist-fc594981f6de0a51baa2.js"
+        "/packs/js/theme-dist-76e573f82673190408f3.js"
       ],
       "js.map": [
-        "/packs/js/theme-dist-fc594981f6de0a51baa2.js.map"
+        "/packs/js/theme-dist-76e573f82673190408f3.js.map"
       ]
     }
   },
   "home.js": "/packs/js/home-a5c0d5db8b56c2405520.js",
   "home.js.map": "/packs/js/home-a5c0d5db8b56c2405520.js.map",
-  "theme-dist.js": "/packs/js/theme-dist-fc594981f6de0a51baa2.js",
-  "theme-dist.js.map": "/packs/js/theme-dist-fc594981f6de0a51baa2.js.map"
+  "theme-dist.js": "/packs/js/theme-dist-76e573f82673190408f3.js",
+  "theme-dist.js.map": "/packs/js/theme-dist-76e573f82673190408f3.js.map"
 }

@@ -4,6 +4,7 @@ require("channels/jquery.nicescroll.min.js");
 require('slick-carousel');
 require("owl.carousel");
 require('popper.js');
+require("channels/jquery.nice-select.min.js");
 require("channels/jquery.magnific-popup.min.js");
 require("channels/jquery.counterup.min.js");
 require("channels/jquery.waypoints.min.js");
