@@ -37,6 +37,10 @@ gem 'haml'
 #manager ENV
 gem 'figaro'
 
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem "mini_magick"
+gem 'image_processing', '~> 1.2'
+
 gem "cloudinary"
 
 gem 'capistrano', '~> 3.11'
