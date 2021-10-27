@@ -42,7 +42,7 @@
                 - @car_models.each do |model|
                   %li
                     %a{href: "/car_models/#{model.slug}"}
-                      = image_tag (model.image.blob.service_url)
+                      = image_tag(url_for(model.image))
                       = model.name
             %li.dropdown.submenu{class: is_active?("Services")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dịch vụ
