@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create!(name: "MyString", price: 2000000)
+# Product.create!(name: "MyString", price: 2000000)
+
+Post.create!(slug: 'the-second-article')

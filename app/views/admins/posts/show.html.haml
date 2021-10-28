@@ -27,4 +27,4 @@
                 = image_tag( url_for(@admins_post.background), class: "img-fluid", width: 200)
           %tr
             %th Nội dung
-            %td= simple_format @admins_post.body
+            %td= @admins_post.body.html_safe

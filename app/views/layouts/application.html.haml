@@ -14,7 +14,11 @@
 
     = javascript_pack_tag 'application'
     = javascript_pack_tag 'home'
-    = javascript_pack_tag 'admins' if body_class.include?('admins')
+
+    - if body_class.include?('admins')
+      = javascript_include_tag Ckeditor.cdn_url
+      = javascript_pack_tag 'admins'
+
   %body{"data-scroll-animation" => 'true', class: body_class}
     .preloader
       .main-loader
