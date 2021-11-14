@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-  # before_action :render_maintenance
+  before_action :render_maintenance
   before_action :set_car_model
 
-  TIME_MAINTENANCE = "Oct 31, 2021 12:00:00"
+  TIME_MAINTENANCE = "Nov 20, 2021 12:00:00"
 
   protected
 
