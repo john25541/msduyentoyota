@@ -1,0 +1,23 @@
+%title Toyota Gò Vấp | Toyota Đông Sài Gòn
+%meta{ property: 'og:url', content: "http://www.toyotagovap.vn#{request.fullpath}" }
+%meta{ property: 'og:type', content: 'website' }
+%meta{ property: 'og:image', content: image_url('image-meta') }
+%meta{ property: 'og:image:secure_url', content: image_url('image-meta') }
+%meta{ property: 'og:image:width', content: '272' }
+%meta{ property: 'og:image:height', content: '66' }
+
+%meta{ property: 'og:title', content: 'Toyota gò vấp' }
+%meta{ property: 'og:description', content: 'Tham khảo thông tin xe, bảng giá và đăng ký lái thử để trải nghiệm tại đại lý gần nhất. Toyota Việt Nam - Chuyển động tiên phong.' }
+%meta{ name: 'description', content: 'Tham khảo thông tin xe, bảng giá và đăng ký lái thử để trải nghiệm tại đại lý gần nhất. Toyota Việt Nam - Chuyển động tiên phong.' }
+%meta{ name: 'keywords', content: 'toyota' }
+
+%meta{ name:"viewport", content:"width=device-width, initial-scale=1" }
+
+= csrf_meta_tags
+= csp_meta_tag
+
+- unless Rails.env.production?
+  %meta{ name: 'robots', content: 'noindex,nofollow' }
+%link{ rel: 'canonical', href: "http://www.toyotagovap.vn#{request.path}" }
+%link{ rel: 'alternate', href: "http://www.toyotagovap.vn#{request.path}", hreflang: 'en' }
+%link{ rel: 'alternate', href: "http://www.toyotagovap.vn#{request.path}", hreflang: 'x-default' }
