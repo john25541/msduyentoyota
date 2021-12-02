@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def render_maintenance
-    if Time.current < TIME_MAINTENANCE.to_time
-      render :file => "#{Rails.root}/public/maintenance.html", :layout => false and return
-    end
+    # if Time.current < TIME_MAINTENANCE.to_time
+    #   render :file => "#{Rails.root}/public/maintenance.html", :layout => false and return
+    # end
+    render :file => "#{Rails.root}/public/500.html", :layout => false and return
   end
 
   def set_car_model
