@@ -4,7 +4,7 @@ class Product < ApplicationRecord
 
   accepts_nested_attributes_for :attachments, reject_if: :all_blank, allow_destroy: true
 
-  # validates :name, :price, :transmission, :body_type,
+  # validates :name, :price, :year, :transmission, :body_type,
   #           :seats, :doors, :colors, :cylinder_capacity,
   #           :fuel, :origin, :car_model_id , presence: true
 
