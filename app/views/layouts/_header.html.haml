@@ -34,7 +34,7 @@
                 %li
                   = link_to "Về chúng tôi", introduces_about_us_path
                 %li
-                  = link_to 'Nhà phát triển', 'https://www.facebook.com/locmiclabs/', target: '_blank'
+                  = link_to "Nhà phát triển", introduces_developer_path
             %li.dropdown.mega_menu{class: is_active?("products")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Mẫu xe
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
@@ -42,41 +42,43 @@
                 - @car_models.each do |model|
                   %li
                     %a{href: "/car_models/#{model.slug}"}
-                      = image_tag(url_for(model.image))
+                      = image_tag (model.image.blob.service_url)
                       = model.name
             %li.dropdown.submenu{class: is_active?("Services")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Dịch vụ
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 01
+                  %a{:href => "service-1.html"} Service 01
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 02
+                  %a{:href => "service-2.html"} Service 02
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service 03
+                  %a{:href => "service-3.html"} Service 03
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Service Details
+                  %a{:href => "service-details.html"} Service Details
             %li.dropdown.submenu{class: is_active?("advisorys")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} TƯ VẤN
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Shop
+                  %a{:href => "shop.html"} Shop
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Shop List
+                  %a{:href => "shop-list.html"} Shop List
                 %li
                   %a{:href => "/products/#{Product&.first&.slug}"} Product Details
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Cart
+                  %a{:href => "cart.html"} Cart
                 %li
-                  %a{:href => "https://www.facebook.com/locmiclabs", target: '_blank'} Checkout
+                  %a{:href => "checkout.html"} Checkout
             %li.dropdown.submenu{class: is_active?("news")}
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Tin tức
               %span.menu_icon{"aria-hidden" => "true", "data-toggle" => "dropdown"}
               %ul.dropdown-menu
                 %li
-                  %a{href: "/tin-tuc"} Tất cả bài viết
+                  %a{:href => "blog.html"} Blog List
                 %li
-                  %a{href: "#{post_path(Post.first&.slug)}"} The First Article
+                  %a{:href => "blog-grid.html"} Blog Grid
+                %li
+                  %a{:href => "single-blog.html"} Blog details
             %li{class: is_active?("contacts")}
               = link_to 'LIÊN HỆ', contacts_path

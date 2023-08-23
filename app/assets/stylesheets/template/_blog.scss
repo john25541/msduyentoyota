@@ -586,12 +586,10 @@
 			}
 			.single_view{
 				p{
-					color: $dip;
-					margin-bottom: 15px;
+					margin-bottom: 35px;
 				}
 				img{
-					margin-top: 25px;
-					margin-bottom: 25px;
+					margin-bottom: 35px;
 				}
 			}
 			.tags{
@@ -658,10 +656,10 @@
 			margin-bottom: 0px;
 		}
 		&:nth-child(3){
-			color: #5f9dec;
+			color: $baseColor;
 		}
 		&:nth-child(4){
-			color: $baseColor;
+			color: #5f9dec;
 		}
 		&:nth-child(5){
 			color: #ff2ad0;

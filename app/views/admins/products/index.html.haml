@@ -15,6 +15,7 @@
               %th STT
               %th Tên
               %th Giá
+              %th Năm Sản xuất
               %th Hộp số
               %th Động cơ
               %th Nhiên Liệu
@@ -33,6 +34,7 @@
                 %td= index + 1
                 %td= product.name
                 %td="#{number_to_currency(product.price, precision: 0, unit: '')} VND"
+                %td= product.year
                 %td= product.transmission
                 %td= product.cylinder_capacity
                 %td= product.fuel
